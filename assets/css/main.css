@@ -686,6 +686,19 @@ section { padding: 5rem 0; }
 }
 .footer-col ul li a:hover { color: var(--cyan); }
 
+.footer-badge {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+.footer-badge img {
+  display: block;
+  border-radius: 8px;
+  opacity: 0.9;
+  transition: opacity 0.2s;
+}
+.footer-badge a:hover img { opacity: 1; }
+
 .footer-bottom {
   display: flex; flex-wrap: wrap;
   align-items: center; justify-content: space-between;

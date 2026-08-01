@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Demo — Mempalace AI Memory OS</title>
+  <meta name="description" content="Try Mempalace live. Search AI memories, explore the palace structure, mine your own text, and see how we beat every memory benchmark. No install required.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="Mempalace">
+  <meta name="ory-verify" content="orynth-c39b520e682541f2bf0ebb2ee96a55ad">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://mempalace.fun/demo.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mempalace">
+  <meta property="og:url" content="https://mempalace.fun/demo.html">
+  <meta property="og:title" content="Interactive Demo — Mempalace AI Memory OS">
+  <meta property="og:description" content="Try Mempalace live. Search AI memories, explore the palace structure, mine your own text, and see how we beat every memory benchmark.">
+  <meta property="og:image" content="https://mempalace.fun/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Interactive Demo — Mempalace AI Memory OS">
+  <meta name="twitter:description" content="Try Mempalace live. Search AI memories, explore the palace structure, and mine your own text.">
+  <meta name="twitter:image" content="https://mempalace.fun/assets/img/og.png">
+  <meta name="twitter:image:alt" content="Mempalace — AI Memory OS Demo">
+
+  <!-- Icons & PWA -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+  <link rel="apple-touch-icon" href="assets/img/logo.svg">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/demo.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://mempalace.fun/demo.html",
+  "url": "https://mempalace.fun/demo.html",
+  "name": "Interactive Demo — Mempalace AI Memory OS",
+  "description": "Try Mempalace live. Search AI memories, explore the palace structure, mine your own text, and see how we beat every memory benchmark.",
+  "isPartOf": { "@id": "https://mempalace.fun/#website" },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mempalace.fun/" },
+      { "@type": "ListItem", "position": 2, "name": "Demo", "item": "https://mempalace.fun/demo.html" }
+    ]
+  }
+}
+  </script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Mempalace home">
+        <div class="logo-icon">
+          <svg class="logo-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="dl1" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#00F5FF"/><stop offset="100%" stop-color="#7B2FFF"/>
+              </linearGradient>
+              <linearGradient id="dl2" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#7B2FFF"/><stop offset="100%" stop-color="#FFD700"/>
+              </linearGradient>
+            </defs>
+            <rect x="6" y="18" width="5" height="22" rx="1.5" fill="url(#dl1)" opacity="0.9"/>
+            <rect x="14" y="14" width="5" height="26" rx="1.5" fill="url(#dl1)"/>
+            <rect x="22" y="10" width="5" height="30" rx="1.5" fill="url(#dl2)"/>
+            <rect x="30" y="14" width="5" height="26" rx="1.5" fill="url(#dl1)"/>
+            <rect x="38" y="18" width="5" height="22" rx="1.5" fill="url(#dl1)" opacity="0.9"/>
+            <rect x="4" y="7" width="40" height="5" rx="2" fill="url(#dl2)" opacity="0.95"/>
+            <rect x="3" y="40" width="42" height="4" rx="2" fill="url(#dl1)" opacity="0.8"/>
+          </svg>
+        </div>
+        <span><span class="logo-text-mp">Mem</span><span class="logo-text-rest">palace</span></span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="demo.html" class="active">Demo</a></li>
+        <li><a href="how-to.html">How-To</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-outline btn-sm" id="navLoginBtn">Sign In</a>
+        <a href="dashboard.html" class="btn btn-primary btn-sm" id="navUserBtn" style="display:none;">Dashboard</a>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" role="navigation" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="demo.html" class="active">Demo</a>
+  <a href="how-to.html">How-To</a>
+  <a href="login.html">Sign In</a>
+</div>
+
+<!-- ─── Page Hero ─── -->
+<section class="page-hero demo-hero" aria-labelledby="demo-hero-heading">
+  <div class="demo-hero-bg" aria-hidden="true">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+  </div>
+  <div class="container">
+    <div class="demo-hero-inner">
+      <span class="section-tag">Live Demo</span>
+      <h1 id="demo-hero-heading">
+        Try Mempalace<br>
+        <span class="gradient-text">Right Now</span>
+      </h1>
+      <p class="section-subtitle">
+        No install. No account. See exactly how Mempalace stores, structures, and retrieves AI memory — with real simulated data.
+      </p>
+      <!-- Demo tab pills -->
+      <nav class="demo-tabs" role="tablist" aria-label="Demo sections">
+        <button class="demo-tab active" role="tab" aria-selected="true"  data-tab="search"    aria-controls="panel-search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          Memory Search
+        </button>
+        <button class="demo-tab" role="tab" aria-selected="false" data-tab="palace"   aria-controls="panel-palace">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Palace Explorer
+        </button>
+        <button class="demo-tab" role="tab" aria-selected="false" data-tab="miner"    aria-controls="panel-miner">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          Live Miner
+        </button>
+        <button class="demo-tab" role="tab" aria-selected="false" data-tab="bench"    aria-controls="panel-bench">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          Benchmarks
+        </button>
+      </nav>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Demo Panels ─── -->
+<main class="demo-main" id="main-content">
+  <div class="container">
+
+    <!-- ══════ PANEL 1: Memory Search ══════ -->
+    <section id="panel-search" class="demo-panel active" role="tabpanel" aria-labelledby="tab-search">
+      <div class="demo-panel-header">
+        <h2>Memory Search</h2>
+        <p>Mempalace uses semantic vector search across your entire palace. Try one of the sample queries or type your own.</p>
+      </div>
+
+      <!-- Search bar -->
+      <div class="demo-search-bar">
+        <div class="demo-search-input-wrap">
+          <svg class="demo-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input
+            type="text"
+            id="searchInput"
+            class="demo-search-input"
+            placeholder="e.g. What stack did we decide for the new project?"
+            autocomplete="off"
+            spellcheck="false"
+            aria-label="Search memories"
+          >
+          <button class="demo-search-clear" id="searchClear" aria-label="Clear search" hidden>&#10005;</button>
+        </div>
+        <button class="btn btn-cyan" id="searchBtn">Search</button>
+      </div>
+
+      <!-- Sample query chips -->
+      <div class="demo-chips" role="list" aria-label="Sample queries">
+        <button class="demo-chip" role="listitem" data-query="What tech stack did we decide for the new app?">Tech stack decision</button>
+        <button class="demo-chip" role="listitem" data-query="What are my preferences for code style?">Code preferences</button>
+        <button class="demo-chip" role="listitem" data-query="When did we last talk about the product roadmap?">Product roadmap</button>
+        <button class="demo-chip" role="listitem" data-query="What problems did we run into with the API?">API problems</button>
+        <button class="demo-chip" role="listitem" data-query="What are Alice's responsibilities?">Team: Alice</button>
+      </div>
+
+      <!-- Results area -->
+      <div class="demo-search-results" id="searchResults" aria-live="polite" aria-label="Search results">
+        <div class="demo-search-empty">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <p>Run a search to see how Mempalace finds memories across your palace.</p>
+        </div>
+      </div>
+
+      <!-- Stats bar (visible after search) -->
+      <div class="demo-search-stats" id="searchStats" hidden>
+        <span id="statsCount"></span>
+        <span id="statsTime"></span>
+        <span class="demo-stat-tag">ChromaDB · AAAK-compressed</span>
+      </div>
+    </section>
+
+    <!-- ══════ PANEL 2: Palace Explorer ══════ -->
+    <section id="panel-palace" class="demo-panel" role="tabpanel" aria-labelledby="tab-palace" hidden>
+      <div class="demo-panel-header">
+        <h2>Palace Explorer</h2>
+        <p>Memories are organized into Wings → Halls → Rooms. Click any node to expand it and inspect individual memories.</p>
+      </div>
+
+      <div class="palace-layout">
+        <!-- Tree -->
+        <div class="palace-tree" id="palaceTree" aria-label="Palace structure tree">
+          <!-- built by JS -->
+        </div>
+        <!-- Detail panel -->
+        <div class="palace-detail" id="palaceDetail">
+          <div class="palace-detail-empty">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            <p>Select a room to inspect its memories</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Palace stats -->
+      <div class="palace-stats-row">
+        <div class="palace-stat">
+          <span class="palace-stat-num">2</span>
+          <span class="palace-stat-label">Wings</span>
+        </div>
+        <div class="palace-stat">
+          <span class="palace-stat-num">8</span>
+          <span class="palace-stat-label">Halls</span>
+        </div>
+        <div class="palace-stat">
+          <span class="palace-stat-num">247</span>
+          <span class="palace-stat-label">Memories</span>
+        </div>
+        <div class="palace-stat">
+          <span class="palace-stat-num">30×</span>
+          <span class="palace-stat-label">Compressed</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════ PANEL 3: Live Miner ══════ -->
+    <section id="panel-miner" class="demo-panel" role="tabpanel" aria-labelledby="tab-miner" hidden>
+      <div class="demo-panel-header">
+        <h2>Live Miner</h2>
+        <p>Paste any text — a conversation snippet, a meeting note, a decision log — and watch Mempalace extract and classify memories in real time.</p>
+      </div>
+
+      <div class="miner-layout">
+        <!-- Input side -->
+        <div class="miner-input-side">
+          <label class="miner-label" for="minerInput">Paste your text</label>
+          <textarea
+            id="minerInput"
+            class="miner-textarea"
+            placeholder="Paste a conversation, meeting notes, decision log, or any text here…
+
+Example:
+User: Let's use Next.js with TypeScript for the frontend. I prefer Tailwind over CSS modules.
+AI: Noted. For the backend, we discussed FastAPI on Python 3.11.
+User: Yes, and Alice will own the auth module. We want JWT with refresh tokens.
+AI: Got it. Main risk: API latency on cold starts."
+            rows="10"
+            aria-label="Text to mine"
+          ></textarea>
+          <div class="miner-toolbar">
+            <button class="btn btn-ghost btn-sm" id="minerSample">Use sample text</button>
+            <button class="btn btn-cyan" id="minerRun">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              Mine Now
+            </button>
+          </div>
+        </div>
+
+        <!-- Output side -->
+        <div class="miner-output-side">
+          <!-- Progress pipeline -->
+          <div class="miner-pipeline" id="minerPipeline">
+            <div class="pipeline-step" id="pstep-parse"   data-label="Parsing text">
+              <div class="pipeline-dot"></div><span>Parse</span>
+            </div>
+            <div class="pipeline-arrow" aria-hidden="true">→</div>
+            <div class="pipeline-step" id="pstep-classify" data-label="Classifying memories">
+              <div class="pipeline-dot"></div><span>Classify</span>
+            </div>
+            <div class="pipeline-arrow" aria-hidden="true">→</div>
+            <div class="pipeline-step" id="pstep-compress" data-label="AAAK compression">
+              <div class="pipeline-dot"></div><span>Compress</span>
+            </div>
+            <div class="pipeline-arrow" aria-hidden="true">→</div>
+            <div class="pipeline-step" id="pstep-store"   data-label="Storing to ChromaDB">
+              <div class="pipeline-dot"></div><span>Store</span>
+            </div>
+          </div>
+
+          <!-- Extracted memories output -->
+          <div class="miner-results" id="minerResults">
+            <div class="miner-empty">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              <p>Extracted memories will appear here</p>
+            </div>
+          </div>
+
+          <!-- Compression meter -->
+          <div class="miner-compression" id="minerCompression" hidden>
+            <div class="compression-row">
+              <span class="compression-label">Original</span>
+              <div class="compression-bar-wrap">
+                <div class="compression-bar compression-bar-original"></div>
+              </div>
+              <span class="compression-val" id="compOriginal">—</span>
+            </div>
+            <div class="compression-row">
+              <span class="compression-label">AAAK</span>
+              <div class="compression-bar-wrap">
+                <div class="compression-bar compression-bar-aaak" id="compAaakBar"></div>
+              </div>
+              <span class="compression-val" id="compAaak">—</span>
+            </div>
+            <p class="compression-note" id="compRatio"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════ PANEL 4: Benchmarks ══════ -->
+    <section id="panel-bench" class="demo-panel" role="tabpanel" aria-labelledby="tab-bench" hidden>
+      <div class="demo-panel-header">
+        <h2>Benchmark Comparison</h2>
+        <p>LongMemEval is the industry-standard benchmark for AI memory systems. Higher is better. All results are reproducible.</p>
+      </div>
+
+      <div class="bench-chart" id="benchChart" role="img" aria-label="LongMemEval benchmark scores">
+        <!-- built by JS -->
+      </div>
+
+      <div class="bench-legend">
+        <div class="bench-legend-item">
+          <span class="bench-legend-dot bench-dot-winner"></span>
+          <span>Mempalace (free, local)</span>
+        </div>
+        <div class="bench-legend-item">
+          <span class="bench-legend-dot bench-dot-paid"></span>
+          <span>Paid / cloud solutions</span>
+        </div>
+        <div class="bench-legend-item">
+          <span class="bench-legend-dot bench-dot-free"></span>
+          <span>Free / open-source alternatives</span>
+        </div>
+      </div>
+
+      <p class="bench-note">LongMemEval dataset · August 2025 · Single-turn recall task · Higher = better</p>
+
+      <!-- Highlight cards -->
+      <div class="bench-highlights">
+        <div class="bench-highlight card">
+          <div class="bench-highlight-num gradient-text">96.6%</div>
+          <div class="bench-highlight-label">Mempalace score</div>
+          <div class="bench-highlight-sub">Highest ever recorded</div>
+        </div>
+        <div class="bench-highlight card">
+          <div class="bench-highlight-num" style="color:var(--cyan);">30×</div>
+          <div class="bench-highlight-label">AAAK compression</div>
+          <div class="bench-highlight-sub">vs raw conversation storage</div>
+        </div>
+        <div class="bench-highlight card">
+          <div class="bench-highlight-num" style="color:var(--gold);">$0</div>
+          <div class="bench-highlight-label">Cost</div>
+          <div class="bench-highlight-sub">Free · MIT · 100% local</div>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /container -->
+</main>
+
+<!-- ─── CTA ─── -->
+<section class="demo-cta" aria-labelledby="demo-cta-heading">
+  <div class="container">
+    <div class="cta-inner">
+      <h2 id="demo-cta-heading">Ready to give your AI real memory?</h2>
+      <p>Install takes two minutes. Works with Claude, ChatGPT, Llama, Mistral, and any MCP-compatible tool.</p>
+      <div class="cta-actions">
+        <a href="how-to.html" class="btn btn-cyan btn-lg">Get Started Free</a>
+        <a href="about.html" class="btn btn-outline btn-lg">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Footer ─── -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" aria-label="Mempalace home">
+          <div class="logo-icon" style="width:32px;height:32px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="dfl1" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#00F5FF"/><stop offset="100%" stop-color="#7B2FFF"/>
+                </linearGradient>
+                <linearGradient id="dfl2" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#7B2FFF"/><stop offset="100%" stop-color="#FFD700"/>
+                </linearGradient>
+              </defs>
+              <rect x="6" y="18" width="5" height="22" rx="1.5" fill="url(#dfl1)" opacity="0.9"/>
+              <rect x="14" y="14" width="5" height="26" rx="1.5" fill="url(#dfl1)"/>
+              <rect x="22" y="10" width="5" height="30" rx="1.5" fill="url(#dfl2)"/>
+              <rect x="30" y="14" width="5" height="26" rx="1.5" fill="url(#dfl1)"/>
+              <rect x="38" y="18" width="5" height="22" rx="1.5" fill="url(#dfl1)" opacity="0.9"/>
+              <rect x="4" y="7" width="40" height="5" rx="2" fill="url(#dfl2)" opacity="0.95"/>
+              <rect x="3" y="40" width="42" height="4" rx="2" fill="url(#dfl1)" opacity="0.8"/>
+            </svg>
+          </div>
+          <span><span class="logo-text-mp">Mem</span><span class="logo-text-rest">palace</span></span>
+        </a>
+        <p>The highest-scoring AI memory system ever benchmarked. Free and open source.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul role="list">
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#benchmarks">Benchmarks</a></li>
+          <li><a href="demo.html">Live Demo</a></li>
+          <li><a href="how-to.html">How-To Guide</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul role="list">
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul role="list">
+          <li><a href="cookies.html">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-badge">
+      <a href="https://orynth.dev/projects/mempalace" target="_blank" rel="noopener">
+        <img src="https://orynth.dev/api/badge/mempalace?theme=dark&style=default" alt="Featured on Orynth" width="260" height="80" loading="lazy">
+      </a>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Mempalace. Open source under MIT License.</p>
+      <nav class="footer-bottom-links" aria-label="Footer legal links">
+        <a href="cookies.html">Cookies</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- Cookie Banner -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+  <div class="cookie-inner">
+    <p>We use minimal analytics cookies to understand how Mempalace is used. Read our <a href="cookies.html">Cookie Policy</a> for details.</p>
+    <div class="cookie-actions">
+      <button class="btn btn-outline btn-sm" id="cookieDecline">Decline</button>
+      <button class="btn btn-primary btn-sm" id="cookieAccept">Accept</button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/demo.js"></script>
+</body>
+</html>

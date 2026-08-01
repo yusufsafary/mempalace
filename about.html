@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Mempalace</title>
+  <meta name="description" content="About Mempalace - the open-source AI memory OS. Learn about our mission, technology, and commitment to privacy-first, local-first AI tools.">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<!-- Nav -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Mempalace home">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="an1" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#00F5FF"/><stop offset="100%" stop-color="#7B2FFF"/>
+              </linearGradient>
+              <linearGradient id="an2" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#7B2FFF"/><stop offset="100%" stop-color="#FFD700"/>
+              </linearGradient>
+            </defs>
+            <rect x="6" y="18" width="5" height="22" rx="1.5" fill="url(#an1)" opacity="0.9"/>
+            <rect x="14" y="14" width="5" height="26" rx="1.5" fill="url(#an1)"/>
+            <rect x="22" y="10" width="5" height="30" rx="1.5" fill="url(#an2)"/>
+            <rect x="30" y="14" width="5" height="26" rx="1.5" fill="url(#an1)"/>
+            <rect x="38" y="18" width="5" height="22" rx="1.5" fill="url(#an1)" opacity="0.9"/>
+            <rect x="4" y="7" width="40" height="5" rx="2" fill="url(#an2)" opacity="0.95"/>
+            <rect x="3" y="40" width="42" height="4" rx="2" fill="url(#an1)" opacity="0.8"/>
+          </svg>
+        </div>
+        <span><span class="logo-text-mp">Mem</span><span class="logo-text-rest">palace</span></span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="how-to.html">How-To</a></li>
+        <li><a href="https://github.com/addyosmani/mempalace" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-outline btn-sm" id="navLoginBtn">Sign In</a>
+        <a href="dashboard.html" class="btn btn-primary btn-sm" id="navUserBtn" style="display:none;">Dashboard</a>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" role="navigation" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="about.html" class="active">About</a>
+  <a href="how-to.html">How-To</a>
+  <a href="https://github.com/addyosmani/mempalace" target="_blank" rel="noopener">GitHub</a>
+  <a href="login.html" class="btn btn-primary">Sign In</a>
+</div>
+
+<!-- Page Hero -->
+<header class="page-hero" aria-labelledby="about-heading">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+  </div>
+  <div class="container" style="position:relative;z-index:1;">
+    <span class="section-tag">About</span>
+    <h1 id="about-heading">The problem we set out to fix</h1>
+    <p>Every conversation you have with an AI disappears when the session ends. Six months of architecture decisions, debugging sessions, and hard-won preferences - gone. You start over every time. We built Mempalace to fix that permanently.</p>
+  </div>
+</header>
+
+<!-- Mission -->
+<section class="about-mission" aria-labelledby="mission-heading">
+  <div class="container">
+    <div style="max-width:800px;margin:0 auto;text-align:center;">
+      <span class="section-tag">Mission</span>
+      <h2 id="mission-heading" class="section-title">AI should know you.<br>Not forget you every session.</h2>
+      <p style="font-size:1.1rem;line-height:1.8;max-width:none;">Other memory systems solve forgetting by letting AI decide what matters. It extracts "user prefers Postgres" and discards the conversation where you explained why - the reasoning that makes the preference meaningful. Mempalace takes a fundamentally different approach: store everything, structure it intelligently, make it all findable. The judgment call about what matters belongs to you, not the model.</p>
+    </div>
+
+    <div class="vision-grid">
+      <div class="vision-card reveal" aria-labelledby="v1-title">
+        <div style="font-size:2rem;margin-bottom:1rem;" aria-hidden="true">&#127963;</div>
+        <h3 id="v1-title">The Palace Metaphor</h3>
+        <p>The method of loci (memory palace) is a mnemonic technique used since ancient Greece. Orators memorized hour-long speeches by placing ideas in rooms of a building they knew well. Walk through the building, find the idea. Mempalace applies this architecture to AI memory: every conversation has a place, and that place makes it findable.</p>
+      </div>
+      <div class="vision-card reveal" aria-labelledby="v2-title">
+        <div style="font-size:2rem;margin-bottom:1rem;" aria-hidden="true">&#128274;</div>
+        <h3 id="v2-title">Local First, Always</h3>
+        <p>Your conversations contain your best thinking - architecture decisions, personal preferences, private context. That data should live on your machine, under your control, permanently. Mempalace runs entirely locally. No cloud required. No account needed for the core product. Your memory is yours.</p>
+      </div>
+      <div class="vision-card reveal" aria-labelledby="v3-title">
+        <div style="font-size:2rem;margin-bottom:1rem;" aria-hidden="true">&#127757;</div>
+        <h3 id="v3-title">Model Agnostic</h3>
+        <p>AAAK compression is structured text with a universal grammar. It works with any model that can read - Claude, GPT, Gemini, Llama, Mistral, anything. Mempalace is not a wrapper around one provider. It is infrastructure that works regardless of which AI you use today or tomorrow.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How it started -->
+<section style="background:var(--bg-primary);padding:5rem 0;" aria-labelledby="story-heading">
+  <div class="container">
+    <div style="max-width:760px;margin:0 auto;">
+      <span class="section-tag">The Story</span>
+      <h2 id="story-heading" class="section-title">Why this exists</h2>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot" aria-hidden="true">&#128269;</div>
+          <div class="timeline-content">
+            <h4>The problem became obvious</h4>
+            <p>After months of deep work with Claude and GPT, patterns emerged. Every new session started from scratch. The AI didn't know about last month's architecture decision. It didn't know about the naming convention debate. It didn't know you'd already tried and rejected three approaches to the auth problem. Six months of context, gone.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot" aria-hidden="true">&#128218;</div>
+          <div class="timeline-content">
+            <h4>Existing solutions missed the point</h4>
+            <p>Cloud memory products summarize your conversations, losing the verbatim context that makes retrieval meaningful. They decide what matters before you've asked the question. They require subscriptions and external APIs. None of them run locally. None of them work with every model. The gap was too large to ignore.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot" aria-hidden="true">&#127775;</div>
+          <div class="timeline-content">
+            <h4>A different architecture</h4>
+            <p>The palace structure came from reading about how memory actually works in humans - spatially organized, contextually anchored. AAAK came from the constraint that local models have tight context windows - you need compression that preserves everything without requiring a decoder ring. The benchmark result (96.6%) validated the approach.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot" aria-hidden="true">&#127968;</div>
+          <div class="timeline-content">
+            <h4>Open sourced it</h4>
+            <p>The right approach for infrastructure is open. Privacy guarantees mean nothing if you can't inspect the code. Local-first means nothing if the tool is a black box. Mempalace is MIT licensed, fully open, and built to be extended. The benchmark runners are in the repo so you can verify the numbers yourself.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Technical Principles -->
+<section style="background:var(--bg-secondary);padding:5rem 0;" aria-labelledby="principles-heading">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-tag">Design Principles</span>
+      <h2 id="principles-heading" class="section-title">What we believe about AI memory</h2>
+    </div>
+
+    <div class="features-grid" style="margin-top:3rem;">
+      <div class="card reveal" aria-labelledby="p1-title">
+        <div class="feature-icon purple" aria-hidden="true">&#128190;</div>
+        <h3 id="p1-title">Store everything, decide later</h3>
+        <p>You cannot predict which context will be relevant in a future conversation. The answer is to store all of it and build retrieval that finds the right piece. Filtering before storage is lossy by definition.</p>
+      </div>
+      <div class="card reveal" aria-labelledby="p2-title">
+        <div class="feature-icon cyan" aria-hidden="true">&#128200;</div>
+        <h3 id="p2-title">Structure improves recall</h3>
+        <p>Random storage and semantic search alone give roughly 62% recall. Adding palace structure - wings, halls, rooms, tunnels - pushes that to 96.6%. The metaphor is not cosmetic. It is load-bearing.</p>
+      </div>
+      <div class="card reveal" aria-labelledby="p3-title">
+        <div class="feature-icon gold" aria-hidden="true">&#128279;</div>
+        <h3 id="p3-title">Compression without loss</h3>
+        <p>30x compression sounds like summarization. AAAK is not summarization - it is a dialect with a defined grammar that can be decoded losslessly. Every entity, emotion marker, and relationship survives compression intact.</p>
+      </div>
+      <div class="card reveal" aria-labelledby="p4-title">
+        <div class="feature-icon green" aria-hidden="true">&#128272;</div>
+        <h3 id="p4-title">No API, no dependency</h3>
+        <p>The core product requires no external API. ChromaDB runs locally. SQLite runs locally. The MCP server runs locally. You can use Mempalace on an airgapped machine with a local Llama model and it works identically.</p>
+      </div>
+      <div class="card reveal" aria-labelledby="p5-title">
+        <div class="feature-icon rose" aria-hidden="true">&#9878;</div>
+        <h3 id="p5-title">Provable claims only</h3>
+        <p>Every benchmark claim in the README is reproducible. The runners are in the repo. The dataset is public (LongMemEval). Run it yourself and verify. We don't make performance claims we cannot back with code.</p>
+      </div>
+      <div class="card reveal" aria-labelledby="p6-title">
+        <div class="feature-icon blue" aria-hidden="true">&#127757;</div>
+        <h3 id="p6-title">Adapt to any data</h3>
+        <p>Mempalace was tested on conversations - but the architecture generalizes. Code repositories, documentation, notes, emails. If it's text and you've thought about it, it can live in the palace.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" aria-labelledby="about-cta-heading">
+  <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+  <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+  <div class="container" style="position:relative;z-index:1;">
+    <span class="section-tag">Get Started</span>
+    <h2 id="about-cta-heading">Ready to build your palace?</h2>
+    <p>Five commands from zero to an AI with perfect memory of your entire working history. Free and open source.</p>
+    <div class="cta-actions">
+      <a href="how-to.html" class="btn btn-cyan btn-lg">Read the Guide</a>
+      <a href="https://github.com/addyosmani/mempalace" target="_blank" rel="noopener" class="btn btn-outline btn-lg">View Source</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" aria-label="Mempalace home">
+          <div class="logo-icon" style="width:32px;height:32px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="afl1" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#00F5FF"/><stop offset="100%" stop-color="#7B2FFF"/>
+                </linearGradient>
+                <linearGradient id="afl2" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#7B2FFF"/><stop offset="100%" stop-color="#FFD700"/>
+                </linearGradient>
+              </defs>
+              <rect x="6" y="18" width="5" height="22" rx="1.5" fill="url(#afl1)" opacity="0.9"/>
+              <rect x="14" y="14" width="5" height="26" rx="1.5" fill="url(#afl1)"/>
+              <rect x="22" y="10" width="5" height="30" rx="1.5" fill="url(#afl2)"/>
+              <rect x="30" y="14" width="5" height="26" rx="1.5" fill="url(#afl1)"/>
+              <rect x="38" y="18" width="5" height="22" rx="1.5" fill="url(#afl1)" opacity="0.9"/>
+              <rect x="4" y="7" width="40" height="5" rx="2" fill="url(#afl2)" opacity="0.95"/>
+              <rect x="3" y="40" width="42" height="4" rx="2" fill="url(#afl1)" opacity="0.8"/>
+            </svg>
+          </div>
+          <span><span class="logo-text-mp">Mem</span><span class="logo-text-rest">palace</span></span>
+        </a>
+        <p>The highest-scoring AI memory system ever benchmarked. Free and open source.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul role="list">
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#benchmarks">Benchmarks</a></li>
+          <li><a href="how-to.html">How-To Guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul role="list">
+          <li><a href="about.html">About</a></li>
+          <li><a href="https://github.com/addyosmani/mempalace/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contributing</a></li>
+          <li><a href="https://github.com/addyosmani/mempalace/blob/main/LICENSE" target="_blank" rel="noopener">License</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul role="list">
+          <li><a href="cookies.html">Cookie Policy</a></li>
+          <li><a href="https://github.com/addyosmani/mempalace/blob/main/LICENSE" target="_blank" rel="noopener">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Mempalace. Open source under MIT License.</p>
+      <nav class="footer-bottom-links" aria-label="Footer legal links">
+        <a href="cookies.html">Cookies</a>
+        <a href="about.html">About</a>
+        <a href="https://github.com/addyosmani/mempalace" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+  <div class="cookie-inner">
+    <p>We use minimal analytics cookies. Read our <a href="cookies.html">Cookie Policy</a>.</p>
+    <div class="cookie-actions">
+      <button class="btn btn-outline btn-sm" id="cookieDecline">Decline</button>
+      <button class="btn btn-primary btn-sm" id="cookieAccept">Accept</button>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

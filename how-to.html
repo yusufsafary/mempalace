@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How-To Guide - Mempalace</title>
+  <meta name="description" content="Complete guide to installing, configuring, and using Mempalace. From pip install to MCP integration with Claude in under 10 minutes.">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Mempalace home">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="hn1" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#00F5FF"/><stop offset="100%" stop-color="#7B2FFF"/>
+              </linearGradient>
+              <linearGradient id="hn2" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#7B2FFF"/><stop offset="100%" stop-color="#FFD700"/>
+              </linearGradient>
+            </defs>
+            <rect x="6" y="18" width="5" height="22" rx="1.5" fill="url(#hn1)" opacity="0.9"/>
+            <rect x="14" y="14" width="5" height="26" rx="1.5" fill="url(#hn1)"/>
+            <rect x="22" y="10" width="5" height="30" rx="1.5" fill="url(#hn2)"/>
+            <rect x="30" y="14" width="5" height="26" rx="1.5" fill="url(#hn1)"/>
+            <rect x="38" y="18" width="5" height="22" rx="1.5" fill="url(#hn1)" opacity="0.9"/>
+            <rect x="4" y="7" width="40" height="5" rx="2" fill="url(#hn2)" opacity="0.95"/>
+            <rect x="3" y="40" width="42" height="4" rx="2" fill="url(#hn1)" opacity="0.8"/>
+          </svg>
+        </div>
+        <span><span class="logo-text-mp">Mem</span><span class="logo-text-rest">palace</span></span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="how-to.html" class="active">How-To</a></li>
+        <li><a href="https://github.com/addyosmani/mempalace" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-outline btn-sm" id="navLoginBtn">Sign In</a>
+        <a href="dashboard.html" class="btn btn-primary btn-sm" id="navUserBtn" style="display:none;">Dashboard</a>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" role="navigation" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="how-to.html" class="active">How-To</a>
+  <a href="https://github.com/addyosmani/mempalace" target="_blank" rel="noopener">GitHub</a>
+  <a href="login.html" class="btn btn-primary">Sign In</a>
+</div>
+
+<header class="page-hero" aria-labelledby="howto-heading">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+  </div>
+  <div class="container" style="position:relative;z-index:1;">
+    <span class="section-tag">Documentation</span>
+    <h1 id="howto-heading">How to use Mempalace</h1>
+    <p>From zero to an AI with perfect memory in under 10 minutes. Python 3.10+ required.</p>
+  </div>
+</header>
+
+<main style="background:var(--bg-primary);padding:3rem 0 5rem;">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr;gap:2rem;" class="how-to-layout">
+
+      <!-- Sidebar TOC -->
+      <aside class="how-to-nav" style="position:sticky;top:85px;align-self:start;" role="navigation" aria-label="Table of contents">
+        <h3>Contents</h3>
+        <ol role="list">
+          <li><a href="#install">1. Install</a></li>
+          <li><a href="#init">2. Initialize your world</a></li>
+          <li><a href="#mine">3. Mine your data</a></li>
+          <li><a href="#search">4. Search</a></li>
+          <li><a href="#mcp">5. MCP with Claude</a></li>
+          <li><a href="#local-models">6. Local models</a></li>
+          <li><a href="#hooks">7. Git hooks</a></li>
+          <li><a href="#aaak">8. AAAK compression</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ol>
+      </aside>
+
+      <!-- Content -->
+      <article style="min-width:0;">
+
+        <!-- Install -->
+        <section class="how-to-section" id="install" aria-labelledby="install-heading">
+          <h2 id="install-heading"><span class="text-cyan">01</span> Install</h2>
+          <p>Mempalace requires Python 3.10 or higher. Install via pip:</p>
+          <div class="code-block">
+            <button class="copy-btn" aria-label="Copy install command">Copy</button>
+            <pre>pip install mempalace</pre>
+          </div>
+          <p>Verify the install:</p>
+          <div class="code-block">
+            <button class="copy-btn" aria-label="Copy verify command">Copy</button>
+            <pre>mempalace --version</pre>
+          </div>
+          <p>Mempalace installs ChromaDB for vector storage and SQLite for the knowledge graph. No external services are started. Everything stays local.</p>
+
+          <div style="background:rgba(0,245,255,0.06);border:1px solid rgba(0,245,255,0.2);border-radius:var(--radius);padding:1rem 1.25rem;margin:1.25rem 0;">
+            <strong style="color:var(--cyan);font-size:0.88rem;">Requirements</strong>
+            <ul style="margin-top:0.5rem;">
+              <li style="color:var(--text-secondary);font-size:0.88rem;padding:0.2rem 0;">Python 3.10+</li>
+              <li style="color:var(--text-secondary);font-size:0.88rem;padding:0.2rem 0;">~500MB disk space (ChromaDB models)</li>
+              <li style="color:var(--text-secondary);font-size:0.88rem;padding:0.2rem 0;">No external APIs required for core functionality</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Init -->
+        <section class="how-to-section" id="init" aria-labelledby="init-heading">
+          <h2 id="init-heading"><span class="text-cyan">02</span> Initialize your world</h2>
+          <p>The init command walks you through setting up your world - the people you work with and the projects you work on. This context shapes how Mempalace organizes everything it mines.</p>
+          <div class="code-block">
+            <button class="copy-btn" aria-label="Copy init command">Copy</button>
+            <pre>mempalace init ~/projects/myapp</pre>
+          </div>
+          <p>During init, Mempalace asks:</p>
+          <ul>
+            <li>Who do you work with? (Creates person wings)</li>
+            <li>What are your main projects? (Creates project wings)</li>
+            <li>What are your key goals? (Anchors the L0 identity layer)</li>
+          </ul>
+          <p>The result is a <code style="color:var(--cyan);font-family:var(--font-mono);background:rgba(0,245,255,0.1);padding:2px 6px;border-radius:4px;">~/.mempalace/config.json</code> file and the palace directory structure. You can edit this file manually at any time.</p>
+
+          <div class="code-block">
+            <button class="copy-btn" aria-label="Copy config example">Copy</button>
+            <pre># View your palace config
+cat ~/.mempalace/config.json</pre>
+          </div>
+        </section>
+
+        <!-- Mine -->
+        <section class="how-to-section" id="mine" aria-labelledby="mine-heading">
+          <h2 id="mine-heading"><span class="text-cyan">03</span> Mine your data</h2>
+          <p>Mining ingests your data into the palace. Three modes handle different data types:</p>
+
+          <h3 style="margin:1.5rem 0 0.75rem;color:var(--text-primary);">Projects mode</h3>
+          <p>Code, docs, notes - any directory of text files.</p>
+          <div class="code-block">
+            <button class="copy-btn" aria-label="Copy projects mine command">Copy</button>
+            <pre>mempalace mine ~/projects/myapp</pre>
+          </div>
+
+          <h3 style="margin:1.5rem 0 0.75rem;color:var(--text-primary);">Conversations mode</h3>
+          <p>Chat exports from Claude, ChatGPT, Slack, or plain text transcripts.</p>
+          <div class="code-block">
+            <button class="copy-btn" aria-label="Copy convos mine command">Copy</button>
+            <pre>mempalace mine ~/chats/ --mode convos</pre>
+          </div>
+          <p>Supported formats:</p>
+          <ul>
+            <li>Claude Code JSONL exports</li>
+            <li>Claude.ai JSON exports</li>
+            <li>ChatGPT JSON exports (from data export)</li>
+            <li>Slack JSON workspace exports</li>
+            <li>Plain text transcripts</li>
+          </ul>
+
+          <h3 style="margin:1.5rem 0 0.75rem;color:var(--text-primary);">General mode</h3>
+          <p>Auto-classifies content into five memory types: decisions, preferences, milestones, problems, and emotional context.</p>
+          <div class="code-block">
+            <button class="copy-btn" aria-label="Copy general mine command">Copy</button>
+            <pre>mempalace mine ~/chats/ --mode convos --extract general</pre>
+          </div>
+
+          <h3 style="margin:1.5rem 0 0.75rem;color:var(--text-primary);">Check status</h3>
+          <div class="code-block">
+            <button class="copy-btn" aria-label="Copy status command">Copy</button>
+            <pre>mempalace status</pre>
+          </div>
+        </section>
+
+        <!-- Search -->
+        <section class="how-to-section" id="search" aria-labelledby="search-heading">
+          <h2 id="search-heading"><span class="text-cyan">04</span> Search your palace</h2>
+          <p>Search uses semantic vector search via ChromaDB plus palace structure filtering. Results are ranked by relevance and palace location.</p>
+          <div class="code-block">
+            <button class="copy-btn" aria-label="Copy search command">Copy</button>
+            <pre># Basic search
+mempalace search "why did we switch to GraphQL"
+
+# Search within a specific wing
+mempalace search "auth decision" --wing projects
+
+# Search with room filter
+mempalace search "naming convention" --room architecture
+
+# Return top 10 results
+mempalace search "postgres config" --top 10</pre>
+          </div>
+          <p>Results include verbatim context, not summaries. What you stored is what you get back.</p>
+        </section>
+
+        <!-- MCP -->
+        <section class="how-to-section" id="mcp" aria-labelledby="mcp-heading">
+          <h2 id="mcp-heading"><span class="text-cyan">05</span> MCP integration with Claude</h2>
+          <p>Model Context Protocol lets Claude call Mempalace tools automatically. Once connected, you never need to run <code style="color:var(--cyan);font-family:var(--font-mono);background:rgba(0,245,255,0.1);padding:2px 6px;border-radius:4px;">mempalace search</code> manually - Claude does it for you when it needs context.</p>
+
+          <h3 style="margin:1.5rem 0 0.75rem;color:var(--text-primary);">Connect Mempalace to Claude</h3>
+          <div class="code-block">
+            <button class="copy-btn" aria-label="Copy MCP add command">Copy</button>
+            <pre>claude mcp add mempalace -- python -m mempalace.mcp_server</pre>
+          </div>
+
+          <h3 style="margin:1.5rem 0 0.75rem;color:var(--text-primary);">Or configure manually in Claude's MCP config</h3>
+          <div class="code-block">
+            <button class="copy-btn" aria-label="Copy MCP config">Copy</button>
+            <pre>{
+  "mcpServers": {
+    "mempalace": {
+      "command": "python",
+      "args": ["-m", "mempalace.mcp_server"]
+    }
+  }
+}</pre>
+          </div>
+
+          <h3 style="margin:1.5rem 0 0.75rem;color:var(--text-primary);">Available MCP tools (19 total)</h3>
+          <ul>
+            <li><code style="color:var(--cyan);font-family:var(--font-mono);">mempalace_search</code> - Semantic search across all wings</li>
+            <li><code style="color:var(--cyan);font-family:var(--font-mono);">mempalace_kg_query</code> - Entity relationship queries</li>
+            <li><code style="color:var(--cyan);font-family:var(--font-mono);">mempalace_wake_up</code> - Load full palace context</li>
+            <li><code style="color:var(--cyan);font-family:var(--font-mono);">mempalace_diary</code> - Write to agent journal</li>
+            <li><code style="color:var(--cyan);font-family:var(--font-mono);">mempalace_compress</code> - Compress context to AAAK</li>
+            <li>...and 14 more. See the <a href="https://github.com/addyosmani/mempalace/blob/main/mempalace/mcp_server.py" target="_blank" rel="noopener" style="color:var(--purple-light);">MCP server source</a> for the full list.</li>
+          </ul>
+
+          <div style="background:rgba(123,47,255,0.08);border:1px solid rgba(123,47,255,0.25);border-radius:var(--radius);padding:1rem 1.25rem;margin:1.25rem 0;">
+            <strong style="color:var(--purple-light);font-size:0.88rem;">After connecting</strong>
+            <p style="font-size:0.88rem;margin-top:0.4rem;margin-bottom:0;">Ask Claude: "What did we decide about auth last month?" - Claude calls <code style="color:var(--cyan);font-family:var(--font-mono);">mempalace_search</code> automatically and answers with your own verbatim context.</p>
+          </div>
+        </section>
+
+        <!-- Local Models -->
+        <section class="how-to-section" id="local-models" aria-labelledby="local-heading">
+          <h2 id="local-heading"><span class="text-cyan">06</span> Local models (Llama, Mistral, etc.)</h2>
+          <p>Local models don't typically support MCP yet. Two approaches work well:</p>
+
+          <h3 style="margin:1.5rem 0 0.75rem;color:var(--text-primary);">Wake-up context (recommended)</h3>
+          <p>Generate a compressed context file and paste it into your model's system prompt:</p>
+          <div class="code-block">
+            <button class="copy-btn" aria-label="Copy wake-up command">Copy</button>
+            <pre>mempalace wake-up > context.txt
+# Paste context.txt into your local model's system prompt</pre>
+          </div>
+
+          <h3 style="margin:1.5rem 0 0.75rem;color:var(--text-primary);">Bash injection</h3>
+          <p>For scripted pipelines, inject search results directly:</p>
+          <div class="code-block">
+            <button class="copy-btn" aria-label="Copy bash injection command">Copy</button>
+            <pre>CONTEXT=$(mempalace search "your question here")
+echo "Context: $CONTEXT\n\nQuestion: your question" | ollama run llama3</pre>
+          </div>
+        </section>
+
+        <!-- Git Hooks -->
+        <section class="how-to-section" id="hooks" aria-labelledby="hooks-heading">
+          <h2 id="hooks-heading"><span class="text-cyan">07</span> Git hooks for automatic mining</h2>
+          <p>Set up git hooks to automatically mine your project on commit or push. Two hooks are included:</p>
+
+          <h3 style="margin:1.5rem 0 0.75rem;color:var(--text-primary);">Pre-compact hook (save before Claude compacts)</h3>
+          <div class="code-block">
+            <button class="copy-btn" aria-label="Copy hook install command">Copy</button>
+            <pre>cp hooks/mempal_precompact_hook.sh ~/.claude/hooks/pre_compact
+chmod +x ~/.claude/hooks/pre_compact</pre>
+          </div>
+
+          <h3 style="margin:1.5rem 0 0.75rem;color:var(--text-primary);">Post-save hook (mine after session save)</h3>
+          <div class="code-block">
+            <button class="copy-btn" aria-label="Copy save hook command">Copy</button>
+            <pre>cp hooks/mempal_save_hook.sh ~/.claude/hooks/post_tool_use
+chmod +x ~/.claude/hooks/post_tool_use</pre>
+          </div>
+          <p>With these in place, your palace stays up to date automatically as you work. No manual mining required after setup.</p>
+        </section>
+
+        <!-- AAAK -->
+        <section class="how-to-section" id="aaak" aria-labelledby="aaak-heading">
+          <h2 id="aaak-heading"><span class="text-cyan">08</span> AAAK compression</h2>
+          <p>AAAK is a lossless shorthand dialect designed for AI context windows. It achieves 30x compression while preserving all semantic content.</p>
+
+          <h3 style="margin:1.5rem 0 0.75rem;color:var(--text-primary);">Teach your AI to read AAAK</h3>
+          <p>The MCP server does this automatically. For manual use:</p>
+          <div class="code-block">
+            <button class="copy-btn" aria-label="Copy compress command">Copy</button>
+            <pre># Compress a large context file
+mempalace compress context.txt --output compressed.aaak
+
+# Decompress back to plain text
+mempalace decompress compressed.aaak</pre>
+          </div>
+
+          <h3 style="margin:1.5rem 0 0.75rem;color:var(--text-primary);">How AAAK works</h3>
+          <ul>
+            <li>Entity codes: People and projects get 2-4 character codes (e.g., <code style="color:var(--cyan);font-family:var(--font-mono);">JD</code> for John Doe)</li>
+            <li>Emotion markers: Sentiment encoded in single characters</li>
+            <li>Relationship shorthand: Structured grammar for entity relationships</li>
+            <li>Universal decoder: Any text model can read it after a 120-token bootstrap</li>
+          </ul>
+
+          <div style="background:rgba(255,215,0,0.06);border:1px solid rgba(255,215,0,0.2);border-radius:var(--radius);padding:1rem 1.25rem;margin:1.25rem 0;">
+            <strong style="color:var(--gold);font-size:0.88rem;">Context efficiency</strong>
+            <p style="font-size:0.88rem;margin-top:0.4rem;margin-bottom:0;">A typical 6-month conversation archive compresses from ~180,000 tokens to ~6,000 tokens in AAAK - within the context window of most models, including local ones.</p>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="how-to-section" id="faq" aria-labelledby="faq-heading">
+          <h2 id="faq-heading">FAQ</h2>
+
+          <div style="display:flex;flex-direction:column;gap:1rem;">
+            <details style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;">
+              <summary style="font-weight:600;cursor:pointer;color:var(--text-primary);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+                Does Mempalace work with ChatGPT?
+                <span style="color:var(--cyan);">+</span>
+              </summary>
+              <p style="margin-top:1rem;font-size:0.9rem;">Yes. ChatGPT does not support MCP yet, so use the wake-up context approach: run <code style="color:var(--cyan);font-family:var(--font-mono);">mempalace wake-up</code> and paste the output into your system prompt or first message. The AAAK-compressed context works fine with GPT-4 and GPT-4o.</p>
+            </details>
+
+            <details style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;">
+              <summary style="font-weight:600;cursor:pointer;color:var(--text-primary);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+                Where does Mempalace store data?
+                <span style="color:var(--cyan);">+</span>
+              </summary>
+              <p style="margin-top:1rem;font-size:0.9rem;">Everything goes to <code style="color:var(--cyan);font-family:var(--font-mono);">~/.mempalace/</code>. The ChromaDB palace (vector store) is in <code style="color:var(--cyan);font-family:var(--font-mono);">~/.mempalace/palace/</code>. The knowledge graph SQLite database is at <code style="color:var(--cyan);font-family:var(--font-mono);">~/.mempalace/kg.db</code>. No data leaves your machine.</p>
+            </details>
+
+            <details style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;">
+              <summary style="font-weight:600;cursor:pointer;color:var(--text-primary);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+                How do I back up my palace?
+                <span style="color:var(--cyan);">+</span>
+              </summary>
+              <p style="margin-top:1rem;font-size:0.9rem;">Back up the entire <code style="color:var(--cyan);font-family:var(--font-mono);">~/.mempalace/</code> directory. You can also export your palace to a portable format:</p>
+              <div class="code-block" style="margin-top:0.75rem;">
+                <pre>mempalace export --output palace_backup.zip</pre>
+              </div>
+            </details>
+
+            <details style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;">
+              <summary style="font-weight:600;cursor:pointer;color:var(--text-primary);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+                Can I use Mempalace with Cursor or Windsurf?
+                <span style="color:var(--cyan);">+</span>
+              </summary>
+              <p style="margin-top:1rem;font-size:0.9rem;">Yes. Both Cursor and Windsurf support MCP. Add the Mempalace MCP server the same way as Claude. Once connected, the IDE's AI assistant can call Mempalace tools automatically during your coding sessions.</p>
+            </details>
+
+            <details style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;">
+              <summary style="font-weight:600;cursor:pointer;color:var(--text-primary);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+                How is this different from RAG?
+                <span style="color:var(--cyan);">+</span>
+              </summary>
+              <p style="margin-top:1rem;font-size:0.9rem;">Standard RAG uses flat vector search - chunk, embed, retrieve. Mempalace adds palace structure on top: wings, halls, rooms, and tunnel connections between related content. That structure is why recall goes from ~62% (pure RAG) to 96.6% (palace RAG). The knowledge graph layer adds temporal entity relationships that flat vector search cannot express.</p>
+            </details>
+
+            <details style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem;">
+              <summary style="font-weight:600;cursor:pointer;color:var(--text-primary);list-style:none;display:flex;justify-content:space-between;align-items:center;">
+                Is Mempalace safe to use at work?
+                <span style="color:var(--cyan);">+</span>
+              </summary>
+              <p style="margin-top:1rem;font-size:0.9rem;">Yes. No data leaves your machine. You choose which directories to mine - you can exclude anything sensitive. The MCP server runs locally and only responds to tools from your local Claude or IDE instance. There is no telemetry. Review the source code in the <a href="https://github.com/addyosmani/mempalace" target="_blank" rel="noopener" style="color:var(--purple-light);">GitHub repo</a> to verify.</p>
+            </details>
+          </div>
+        </section>
+
+        <!-- Next steps -->
+        <section style="margin-top:3rem;padding:2rem;background:linear-gradient(135deg,rgba(123,47,255,0.1),rgba(0,245,255,0.06));border:1px solid var(--border);border-radius:var(--radius-lg);" aria-labelledby="nextsteps-heading">
+          <h3 id="nextsteps-heading" style="margin-bottom:1rem;">Ready to get started?</h3>
+          <p style="margin-bottom:1.5rem;">Create a free account to access the demo dashboard, or go straight to the GitHub repo and start using Mempalace locally.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.75rem;">
+            <a href="login.html" class="btn btn-primary">Create Account</a>
+            <a href="https://github.com/addyosmani/mempalace" target="_blank" rel="noopener" class="btn btn-outline">View on GitHub</a>
+            <a href="https://github.com/addyosmani/mempalace/blob/main/examples/basic_mining.py" target="_blank" rel="noopener" class="btn btn-ghost">See Examples</a>
+          </div>
+        </section>
+
+      </article>
+    </div>
+  </div>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" aria-label="Mempalace home">
+          <div class="logo-icon" style="width:32px;height:32px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="hfl1" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#00F5FF"/><stop offset="100%" stop-color="#7B2FFF"/>
+                </linearGradient>
+                <linearGradient id="hfl2" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#7B2FFF"/><stop offset="100%" stop-color="#FFD700"/>
+                </linearGradient>
+              </defs>
+              <rect x="6" y="18" width="5" height="22" rx="1.5" fill="url(#hfl1)" opacity="0.9"/>
+              <rect x="14" y="14" width="5" height="26" rx="1.5" fill="url(#hfl1)"/>
+              <rect x="22" y="10" width="5" height="30" rx="1.5" fill="url(#hfl2)"/>
+              <rect x="30" y="14" width="5" height="26" rx="1.5" fill="url(#hfl1)"/>
+              <rect x="38" y="18" width="5" height="22" rx="1.5" fill="url(#hfl1)" opacity="0.9"/>
+              <rect x="4" y="7" width="40" height="5" rx="2" fill="url(#hfl2)" opacity="0.95"/>
+              <rect x="3" y="40" width="42" height="4" rx="2" fill="url(#hfl1)" opacity="0.8"/>
+            </svg>
+          </div>
+          <span><span class="logo-text-mp">Mem</span><span class="logo-text-rest">palace</span></span>
+        </a>
+        <p>The highest-scoring AI memory system ever benchmarked. Free and open source.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul role="list">
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#benchmarks">Benchmarks</a></li>
+          <li><a href="how-to.html">How-To Guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul role="list">
+          <li><a href="about.html">About</a></li>
+          <li><a href="https://github.com/addyosmani/mempalace/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contributing</a></li>
+          <li><a href="https://github.com/addyosmani/mempalace/blob/main/LICENSE" target="_blank" rel="noopener">License</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul role="list">
+          <li><a href="cookies.html">Cookie Policy</a></li>
+          <li><a href="https://github.com/addyosmani/mempalace/blob/main/LICENSE" target="_blank" rel="noopener">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Mempalace. Open source under MIT License.</p>
+      <nav class="footer-bottom-links" aria-label="Footer legal links">
+        <a href="cookies.html">Cookies</a>
+        <a href="about.html">About</a>
+        <a href="https://github.com/addyosmani/mempalace" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent">
+  <div class="cookie-inner">
+    <p>We use minimal analytics cookies. Read our <a href="cookies.html">Cookie Policy</a>.</p>
+    <div class="cookie-actions">
+      <button class="btn btn-outline btn-sm" id="cookieDecline">Decline</button>
+      <button class="btn btn-primary btn-sm" id="cookieAccept">Accept</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  @media (min-width:1024px) {
+    .how-to-layout {
+      grid-template-columns: 240px 1fr;
+    }
+  }
+  details summary::-webkit-details-marker { display: none; }
+</style>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

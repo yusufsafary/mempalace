@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Mempalace</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<!-- Nav -->
+<nav class="nav scrolled" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Mempalace home">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="dn1" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#00F5FF"/><stop offset="100%" stop-color="#7B2FFF"/>
+              </linearGradient>
+              <linearGradient id="dn2" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#7B2FFF"/><stop offset="100%" stop-color="#FFD700"/>
+              </linearGradient>
+            </defs>
+            <rect x="6" y="18" width="5" height="22" rx="1.5" fill="url(#dn1)" opacity="0.9"/>
+            <rect x="14" y="14" width="5" height="26" rx="1.5" fill="url(#dn1)"/>
+            <rect x="22" y="10" width="5" height="30" rx="1.5" fill="url(#dn2)"/>
+            <rect x="30" y="14" width="5" height="26" rx="1.5" fill="url(#dn1)"/>
+            <rect x="38" y="18" width="5" height="22" rx="1.5" fill="url(#dn1)" opacity="0.9"/>
+            <rect x="4" y="7" width="40" height="5" rx="2" fill="url(#dn2)" opacity="0.95"/>
+            <rect x="3" y="40" width="42" height="4" rx="2" fill="url(#dn1)" opacity="0.8"/>
+          </svg>
+        </div>
+        <span><span class="logo-text-mp">Mem</span><span class="logo-text-rest">palace</span></span>
+      </a>
+
+      <div class="nav-actions" style="gap:1rem;">
+        <div style="display:flex;align-items:center;gap:0.75rem;">
+          <div style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--cyan));display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-weight:700;font-size:0.9rem;color:#fff;" data-user="avatar" aria-hidden="true">?</div>
+          <span style="font-size:0.88rem;color:var(--text-secondary);max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;" data-user="name"></span>
+        </div>
+        <button class="btn btn-outline btn-sm" data-action="logout">Sign Out</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Dashboard Layout -->
+<div class="dashboard-layout">
+  <!-- Sidebar -->
+  <aside class="sidebar" role="complementary" aria-label="Dashboard navigation">
+    <nav aria-label="Dashboard sections">
+      <span class="sidebar-section-label">Main</span>
+      <button class="sidebar-link active" data-view="search" aria-label="Memory search">
+        <span class="icon" aria-hidden="true">&#128269;</span> Search Palace
+      </button>
+      <button class="sidebar-link" data-view="activity" aria-label="Recent activity">
+        <span class="icon" aria-hidden="true">&#9889;</span> Activity
+      </button>
+      <button class="sidebar-link" data-view="wings" aria-label="Browse wings">
+        <span class="icon" aria-hidden="true">&#127963;</span> Wings
+      </button>
+
+      <span class="sidebar-section-label">Memory Types</span>
+      <button class="sidebar-link" data-view="decisions" aria-label="View decisions">
+        <span class="icon" aria-hidden="true">&#9878;</span> Decisions
+      </button>
+      <button class="sidebar-link" data-view="preferences" aria-label="View preferences">
+        <span class="icon" aria-hidden="true">&#11088;</span> Preferences
+      </button>
+      <button class="sidebar-link" data-view="milestones" aria-label="View milestones">
+        <span class="icon" aria-hidden="true">&#127942;</span> Milestones
+      </button>
+
+      <span class="sidebar-section-label">Tools</span>
+      <a href="how-to.html" class="sidebar-link" aria-label="MCP setup guide">
+        <span class="icon" aria-hidden="true">&#128279;</span> MCP Setup
+      </a>
+      <button class="sidebar-link" data-view="settings" aria-label="Settings">
+        <span class="icon" aria-hidden="true">&#9881;</span> Settings
+      </button>
+
+      <div style="margin-top:auto;padding-top:2rem;border-top:1px solid var(--border);">
+        <div style="padding:0.75rem;background:rgba(0,245,255,0.06);border:1px solid rgba(0,245,255,0.15);border-radius:var(--radius);">
+          <p style="font-size:0.78rem;color:var(--cyan);font-weight:600;margin-bottom:0.3rem;">Demo Mode</p>
+          <p style="font-size:0.75rem;color:var(--text-muted);">Sample data shown. Install Mempalace locally to mine your real memories.</p>
+        </div>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="dashboard-content" role="main">
+
+    <!-- Search Panel -->
+    <div data-panel="search">
+      <div class="dash-header">
+        <div>
+          <h2>Memory Search</h2>
+          <p style="font-size:0.88rem;color:var(--text-muted);">Search across your entire palace - decisions, preferences, milestones, conversations.</p>
+        </div>
+        <div style="display:flex;gap:0.75rem;align-items:center;">
+          <span style="font-size:0.8rem;color:var(--text-muted);">Logged in as</span>
+          <span style="font-size:0.8rem;color:var(--cyan);font-weight:600;" data-user="type"></span>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="dash-stats-grid" role="list" aria-label="Memory statistics">
+        <div class="dash-stat" role="listitem">
+          <div class="dash-stat-val gradient-text-purple" data-counter="12483" data-comma="true" aria-label="12,483 total memories">0</div>
+          <div class="dash-stat-label">Total Memories</div>
+        </div>
+        <div class="dash-stat" role="listitem">
+          <div class="dash-stat-val" style="color:var(--cyan);" data-counter="847" data-comma="true" aria-label="847 mined today">0</div>
+          <div class="dash-stat-label">Mined Today</div>
+        </div>
+        <div class="dash-stat" role="listitem">
+          <div class="dash-stat-val" style="color:var(--gold);" data-counter="6" aria-label="6 wings">0</div>
+          <div class="dash-stat-label">Wings</div>
+        </div>
+        <div class="dash-stat" role="listitem">
+          <div class="dash-stat-val" style="color:#00DC82;" data-counter="96" aria-suffix="%" aria-label="96% recall rate">0</div>
+          <div class="dash-stat-label">Recall Rate</div>
+        </div>
+      </div>
+
+      <!-- Search Box -->
+      <div class="card" style="margin-bottom:1.5rem;">
+        <h3 style="margin-bottom:1rem;font-size:1rem;">Search your palace</h3>
+        <div class="search-box" role="search">
+          <label for="searchInput" class="sr-only">Search memories</label>
+          <input type="search" id="searchInput" class="search-input" placeholder="e.g. why did we switch to GraphQL..." aria-label="Search memories">
+          <button id="searchBtn" class="search-btn" aria-label="Run search">&#128269;</button>
+        </div>
+        <p id="searchStats" style="display:none;font-size:0.8rem;color:var(--text-muted);margin-top:0.5rem;"></p>
+
+        <div id="memoryResults" style="margin-top:1rem;" role="region" aria-label="Search results" aria-live="polite">
+          <p style="color:var(--text-muted);font-size:0.9rem;">Type a query above to search your memory palace.</p>
+        </div>
+      </div>
+
+      <!-- Quick Filters -->
+      <div class="card">
+        <h3 style="margin-bottom:1rem;font-size:1rem;">Browse by type</h3>
+        <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
+          <button onclick="document.getElementById('searchInput').value='decision';document.getElementById('searchBtn').click();" class="btn btn-sm" style="background:rgba(123,47,255,0.15);color:var(--purple-light);border:1px solid rgba(123,47,255,0.3);">&#9878; Decisions</button>
+          <button onclick="document.getElementById('searchInput').value='preference';document.getElementById('searchBtn').click();" class="btn btn-sm" style="background:rgba(0,245,255,0.12);color:var(--cyan);border:1px solid rgba(0,245,255,0.3);">&#11088; Preferences</button>
+          <button onclick="document.getElementById('searchInput').value='milestone';document.getElementById('searchBtn').click();" class="btn btn-sm" style="background:rgba(255,215,0,0.12);color:var(--gold);border:1px solid rgba(255,215,0,0.3);">&#127942; Milestones</button>
+          <button onclick="document.getElementById('searchInput').value='problem';document.getElementById('searchBtn').click();" class="btn btn-sm" style="background:rgba(255,80,80,0.12);color:#FF8080;border:1px solid rgba(255,80,80,0.3);">&#128680; Problems</button>
+          <button onclick="document.getElementById('searchInput').value='Architecture';document.getElementById('searchBtn').click();" class="btn btn-sm" style="background:rgba(0,220,130,0.12);color:#00DC82;border:1px solid rgba(0,220,130,0.3);">&#127963; Architecture</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Activity Panel -->
+    <div data-panel="activity" style="display:none;">
+      <div class="dash-header">
+        <h2>Recent Activity</h2>
+      </div>
+      <div class="card">
+        <div id="activityList" role="list" aria-label="Recent activity"></div>
+      </div>
+    </div>
+
+    <!-- Wings Panel -->
+    <div data-panel="wings" style="display:none;">
+      <div class="dash-header">
+        <h2>Palace Wings</h2>
+        <p style="font-size:0.88rem;color:var(--text-muted);">Your memory organized by wing (people and projects) and room (specific areas).</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;">
+        <div class="card">
+          <div style="font-size:1.5rem;margin-bottom:0.75rem;" aria-hidden="true">&#128188;</div>
+          <h3 style="font-size:1rem;margin-bottom:0.3rem;">Projects</h3>
+          <p style="font-size:0.82rem;">3,241 memories across 4 rooms</p>
+          <div style="margin-top:0.75rem;display:flex;flex-direction:column;gap:0.3rem;">
+            <span style="font-size:0.78rem;color:var(--text-muted);">Architecture, Bugs, Launches, Planning</span>
+          </div>
+        </div>
+        <div class="card">
+          <div style="font-size:1.5rem;margin-bottom:0.75rem;" aria-hidden="true">&#128100;</div>
+          <h3 style="font-size:1rem;margin-bottom:0.3rem;">Personal</h3>
+          <p style="font-size:0.82rem;">1,892 memories across 3 rooms</p>
+          <div style="margin-top:0.75rem;">
+            <span style="font-size:0.78rem;color:var(--text-muted);">Dev Setup, Work Style, Learning</span>
+          </div>
+        </div>
+        <div class="card">
+          <div style="font-size:1.5rem;margin-bottom:0.75rem;" aria-hidden="true">&#128101;</div>
+          <h3 style="font-size:1rem;margin-bottom:0.3rem;">Team</h3>
+          <p style="font-size:0.82rem;">4,102 memories across 5 rooms</p>
+          <div style="margin-top:0.75rem;">
+            <span style="font-size:0.78rem;color:var(--text-muted);">Decisions, Discussions, Reviews, Retros, Goals</span>
+          </div>
+        </div>
+        <div class="card">
+          <div style="font-size:1.5rem;margin-bottom:0.75rem;" aria-hidden="true">&#127760;</div>
+          <h3 style="font-size:1rem;margin-bottom:0.3rem;">Research</h3>
+          <p style="font-size:0.82rem;">2,108 memories across 3 rooms</p>
+          <div style="margin-top:0.75rem;">
+            <span style="font-size:0.78rem;color:var(--text-muted);">Papers, Tools, Experiments</span>
+          </div>
+        </div>
+        <div class="card" style="border-style:dashed;cursor:pointer;" onclick="showToast('Wing creation requires local Mempalace install. See the How-To guide.','info')">
+          <div style="font-size:1.5rem;margin-bottom:0.75rem;" aria-hidden="true">&#43;</div>
+          <h3 style="font-size:1rem;margin-bottom:0.3rem;color:var(--text-muted);">Add Wing</h3>
+          <p style="font-size:0.82rem;">Create a new wing with custom rooms</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decisions Panel -->
+    <div data-panel="decisions" style="display:none;">
+      <div class="dash-header"><h2>Decisions</h2></div>
+      <div class="card">
+        <div id="decisionsList"></div>
+      </div>
+    </div>
+
+    <!-- Preferences Panel -->
+    <div data-panel="preferences" style="display:none;">
+      <div class="dash-header"><h2>Preferences</h2></div>
+      <div class="card">
+        <div id="preferencesList"></div>
+      </div>
+    </div>
+
+    <!-- Milestones Panel -->
+    <div data-panel="milestones" style="display:none;">
+      <div class="dash-header"><h2>Milestones</h2></div>
+      <div class="card">
+        <div id="milestonesList"></div>
+      </div>
+    </div>
+
+    <!-- Settings Panel -->
+    <div data-panel="settings" style="display:none;">
+      <div class="dash-header"><h2>Settings</h2></div>
+      <div style="display:grid;gap:1.5rem;">
+        <div class="card">
+          <h3 style="font-size:1rem;margin-bottom:1rem;">Account</h3>
+          <div style="display:flex;align-items:center;gap:1rem;padding:1rem;background:var(--bg-secondary);border-radius:var(--radius);">
+            <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--cyan));display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-weight:700;font-size:1.2rem;color:#fff;" data-user="avatar" aria-hidden="true">?</div>
+            <div>
+              <div style="font-weight:600;margin-bottom:0.2rem;" data-user="name"></div>
+              <div style="font-size:0.82rem;color:var(--text-muted);" data-user="email"></div>
+              <div style="font-size:0.75rem;color:var(--purple-light);margin-top:0.2rem;" data-user="type"></div>
+            </div>
+          </div>
+          <button class="btn btn-outline btn-sm" style="margin-top:1rem;" data-action="logout">Sign Out</button>
+        </div>
+
+        <div class="card">
+          <h3 style="font-size:1rem;margin-bottom:0.5rem;">MCP Configuration</h3>
+          <p style="font-size:0.88rem;margin-bottom:1rem;">Connect Mempalace to Claude and other MCP-compatible tools.</p>
+          <div class="code-block">
+            <button class="copy-btn">Copy</button>
+            <pre>claude mcp add mempalace -- python -m mempalace.mcp_server</pre>
+          </div>
+          <a href="how-to.html#mcp" class="btn btn-outline btn-sm" style="margin-top:0.75rem;">Full MCP Setup Guide</a>
+        </div>
+
+        <div class="card">
+          <h3 style="font-size:1rem;margin-bottom:0.5rem;">Data and Privacy</h3>
+          <p style="font-size:0.88rem;margin-bottom:1rem;">All data shown here is local to this browser. Your actual memory palace lives on your machine.</p>
+          <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+            <button class="btn btn-outline btn-sm" onclick="if(confirm('Clear all local session data?')){localStorage.clear();showToast('Local data cleared','success');setTimeout(function(){window.location.href='login.html'},800);}">Clear Local Data</button>
+            <a href="cookies.html" class="btn btn-ghost btn-sm">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="assets/js/main.js"></script>
+<script>
+// Populate filter panels
+window.addEventListener('DOMContentLoaded', function() {
+  var memories = [
+    { id:1, tag:'decision', text:'Switched from REST to GraphQL for the API layer after benchmarking latency with 10k concurrent requests.', date:'2024-12-15', wing:'Projects', room:'Architecture' },
+    { id:5, tag:'decision', text:'Chose Postgres over MongoDB for the new service. Complex joins and ACID compliance outweigh document flexibility.', date:'2025-03-20', wing:'Projects', room:'Architecture' },
+    { id:2, tag:'preference', text:'Prefers TypeScript strict mode across all projects. ESLint with Airbnb config. No semicolons. Tabs = 2 spaces.', date:'2025-01-03', wing:'Personal', room:'Dev Setup' },
+    { id:6, tag:'preference', text:'Morning deep work 7-11am. No meetings before noon. Slack notifications off during focus blocks.', date:'2025-04-05', wing:'Personal', room:'Work Style' },
+    { id:3, tag:'milestone', text:'Shipped v2.0 of the platform with 99.97% uptime over 30 days. Zero critical bugs in production.', date:'2025-02-10', wing:'Projects', room:'Launches' },
+    { id:4, tag:'problem', text:'Memory leak in the worker pool caused 2GB RAM spike every 6h.', date:'2025-03-01', wing:'Projects', room:'Bugs' },
+  ];
+
+  function renderList(containerId, filterTag) {
+    var container = document.getElementById(containerId);
+    if (!container) return;
+    var items = filterTag ? memories.filter(function(m) { return m.tag === filterTag; }) : memories;
+    if (!items.length) { container.innerHTML = '<p style="color:var(--text-muted);font-size:0.9rem;">No items found.</p>'; return; }
+    container.innerHTML = '';
+    items.forEach(function(mem) {
+      var el = document.createElement('div');
+      el.className = 'memory-result';
+      el.innerHTML = '<div class="memory-result-meta"><span class="memory-tag tag-' + mem.tag + '">' + mem.tag + '</span><span class="text-muted text-sm">' + mem.wing + ' / ' + mem.room + '</span></div><div class="memory-result-text">' + mem.text + '</div><div class="memory-result-date" style="margin-top:0.5rem;">' + mem.date + '</div>';
+      container.appendChild(el);
+    });
+  }
+
+  renderList('decisionsList', 'decision');
+  renderList('preferencesList', 'preference');
+  renderList('milestonesList', 'milestone');
+});
+</script>
+<script src="assets/js/dashboard.js"></script>
+</body>
+</html>

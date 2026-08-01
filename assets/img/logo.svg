@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <defs>
+    <linearGradient id="lg1" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00F5FF"/>
+      <stop offset="100%" stop-color="#7B2FFF"/>
+    </linearGradient>
+    <linearGradient id="lg2" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#7B2FFF"/>
+      <stop offset="100%" stop-color="#FFD700"/>
+    </linearGradient>
+  </defs>
+  <!-- Pillars -->
+  <rect x="6" y="18" width="5" height="22" rx="1.5" fill="url(#lg1)" opacity="0.9"/>
+  <rect x="14" y="14" width="5" height="26" rx="1.5" fill="url(#lg1)"/>
+  <rect x="22" y="10" width="5" height="30" rx="1.5" fill="url(#lg2)"/>
+  <rect x="30" y="14" width="5" height="26" rx="1.5" fill="url(#lg1)"/>
+  <rect x="38" y="18" width="5" height="22" rx="1.5" fill="url(#lg1)" opacity="0.9"/>
+  <!-- Cornice (top bar) -->
+  <rect x="4" y="7" width="40" height="5" rx="2" fill="url(#lg2)" opacity="0.95"/>
+  <!-- Base -->
+  <rect x="3" y="40" width="42" height="4" rx="2" fill="url(#lg1)" opacity="0.8"/>
+</svg>

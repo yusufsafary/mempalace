@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found - Mempalace</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<nav class="nav scrolled" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Mempalace home">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="err1" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#00F5FF"/><stop offset="100%" stop-color="#7B2FFF"/>
+              </linearGradient>
+              <linearGradient id="err2" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#7B2FFF"/><stop offset="100%" stop-color="#FFD700"/>
+              </linearGradient>
+            </defs>
+            <rect x="6" y="18" width="5" height="22" rx="1.5" fill="url(#err1)" opacity="0.9"/>
+            <rect x="14" y="14" width="5" height="26" rx="1.5" fill="url(#err1)"/>
+            <rect x="22" y="10" width="5" height="30" rx="1.5" fill="url(#err2)"/>
+            <rect x="30" y="14" width="5" height="26" rx="1.5" fill="url(#err1)"/>
+            <rect x="38" y="18" width="5" height="22" rx="1.5" fill="url(#err1)" opacity="0.9"/>
+            <rect x="4" y="7" width="40" height="5" rx="2" fill="url(#err2)" opacity="0.95"/>
+            <rect x="3" y="40" width="42" height="4" rx="2" fill="url(#err1)" opacity="0.8"/>
+          </svg>
+        </div>
+        <span><span class="logo-text-mp">Mem</span><span class="logo-text-rest">palace</span></span>
+      </a>
+      <div class="nav-actions">
+        <a href="index.html" class="btn btn-outline btn-sm">Back to Home</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:6rem 1.5rem 4rem;text-align:center;position:relative;overflow:hidden;" aria-labelledby="error-heading">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-orb hero-orb-1" style="opacity:0.3;"></div>
+    <div class="hero-orb hero-orb-2" style="opacity:0.2;"></div>
+  </div>
+  <div style="position:relative;z-index:1;max-width:520px;">
+    <div style="font-family:var(--font-heading);font-size:clamp(5rem,20vw,10rem);font-weight:800;line-height:1;background:linear-gradient(135deg,var(--purple),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:1rem;" aria-hidden="true">404</div>
+    <h1 id="error-heading" style="font-size:clamp(1.4rem,4vw,2rem);margin-bottom:1rem;">This room doesn't exist</h1>
+    <p style="margin-bottom:2.5rem;font-size:1.05rem;">The page you're looking for isn't in the palace. It may have been moved, renamed, or never built.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;">
+      <a href="index.html" class="btn btn-primary btn-lg">Return Home</a>
+      <a href="how-to.html" class="btn btn-outline btn-lg">Read the Guide</a>
+    </div>
+    <nav style="margin-top:3rem;display:flex;flex-wrap:wrap;gap:1.5rem;justify-content:center;" aria-label="Quick navigation">
+      <a href="about.html" style="color:var(--text-muted);font-size:0.88rem;transition:color 0.2s;" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--text-muted)'">About</a>
+      <a href="how-to.html" style="color:var(--text-muted);font-size:0.88rem;transition:color 0.2s;" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--text-muted)'">How-To</a>
+      <a href="login.html" style="color:var(--text-muted);font-size:0.88rem;transition:color 0.2s;" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--text-muted)'">Sign In</a>
+      <a href="cookies.html" style="color:var(--text-muted);font-size:0.88rem;transition:color 0.2s;" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--text-muted)'">Cookie Policy</a>
+      <a href="https://github.com/addyosmani/mempalace" target="_blank" rel="noopener" style="color:var(--text-muted);font-size:0.88rem;transition:color 0.2s;" onmouseover="this.style.color='var(--cyan)'" onmouseout="this.style.color='var(--text-muted)'">GitHub</a>
+    </nav>
+  </div>
+</main>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

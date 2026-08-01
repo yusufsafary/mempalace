@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In - Mempalace</title>
+  <meta name="description" content="Sign in to Mempalace. Use your email and password or connect your Metamask or Phantom wallet.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <style>
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav class="nav scrolled" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Mempalace home">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="nl1" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#00F5FF"/><stop offset="100%" stop-color="#7B2FFF"/>
+              </linearGradient>
+              <linearGradient id="nl2" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#7B2FFF"/><stop offset="100%" stop-color="#FFD700"/>
+              </linearGradient>
+            </defs>
+            <rect x="6" y="18" width="5" height="22" rx="1.5" fill="url(#nl1)" opacity="0.9"/>
+            <rect x="14" y="14" width="5" height="26" rx="1.5" fill="url(#nl1)"/>
+            <rect x="22" y="10" width="5" height="30" rx="1.5" fill="url(#nl2)"/>
+            <rect x="30" y="14" width="5" height="26" rx="1.5" fill="url(#nl1)"/>
+            <rect x="38" y="18" width="5" height="22" rx="1.5" fill="url(#nl1)" opacity="0.9"/>
+            <rect x="4" y="7" width="40" height="5" rx="2" fill="url(#nl2)" opacity="0.95"/>
+            <rect x="3" y="40" width="42" height="4" rx="2" fill="url(#nl1)" opacity="0.8"/>
+          </svg>
+        </div>
+        <span><span class="logo-text-mp">Mem</span><span class="logo-text-rest">palace</span></span>
+      </a>
+      <div class="nav-actions">
+        <a href="index.html" class="btn btn-ghost btn-sm">Back to Home</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Auth Page -->
+<main class="auth-page" aria-labelledby="auth-heading">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+  </div>
+
+  <div class="container">
+    <div class="auth-card">
+      <!-- Logo -->
+      <div class="auth-logo">
+        <div style="width:36px;height:36px;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="al1" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#00F5FF"/><stop offset="100%" stop-color="#7B2FFF"/>
+              </linearGradient>
+              <linearGradient id="al2" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#7B2FFF"/><stop offset="100%" stop-color="#FFD700"/>
+              </linearGradient>
+            </defs>
+            <rect x="6" y="18" width="5" height="22" rx="1.5" fill="url(#al1)" opacity="0.9"/>
+            <rect x="14" y="14" width="5" height="26" rx="1.5" fill="url(#al1)"/>
+            <rect x="22" y="10" width="5" height="30" rx="1.5" fill="url(#al2)"/>
+            <rect x="30" y="14" width="5" height="26" rx="1.5" fill="url(#al1)"/>
+            <rect x="38" y="18" width="5" height="22" rx="1.5" fill="url(#al1)" opacity="0.9"/>
+            <rect x="4" y="7" width="40" height="5" rx="2" fill="url(#al2)" opacity="0.95"/>
+            <rect x="3" y="40" width="42" height="4" rx="2" fill="url(#al1)" opacity="0.8"/>
+          </svg>
+        </div>
+        <span><span class="logo-text-mp">Mem</span><span class="logo-text-rest">palace</span></span>
+      </div>
+
+      <!-- Tabs -->
+      <div class="auth-tabs" role="tablist" aria-label="Authentication method">
+        <button class="auth-tab active" data-tab="login" role="tab" aria-selected="true" aria-controls="panel-login">Sign In</button>
+        <button class="auth-tab" data-tab="register" role="tab" aria-selected="false" aria-controls="panel-register">Create Account</button>
+      </div>
+
+      <!-- Login Panel -->
+      <div class="auth-panel active" id="panel-login" role="tabpanel" aria-labelledby="tab-login">
+        <form class="auth-form" id="loginForm" novalidate aria-label="Email login form">
+          <div class="form-group">
+            <label class="form-label" for="loginEmail">Email address</label>
+            <input class="form-input" type="email" id="loginEmail" name="email"
+              placeholder="you@example.com" autocomplete="email" required aria-required="true">
+            <span class="form-error" id="loginEmailError" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="form-group">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <label class="form-label" for="loginPassword">Password</label>
+              <a href="#" id="forgotLink" style="font-size:0.78rem;color:var(--purple-light);">Forgot password?</a>
+            </div>
+            <div class="input-wrap">
+              <input class="form-input" type="password" id="loginPassword" name="password"
+                placeholder="Enter your password" autocomplete="current-password" required aria-required="true">
+              <button type="button" class="toggle-pass" aria-label="Show or hide password">&#128065;</button>
+            </div>
+            <span class="form-error" id="loginPasswordError" role="alert" aria-live="polite"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-full" style="margin-top:0.5rem;">
+            <span class="btn-label">Sign In</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <!-- Divider -->
+        <div class="form-divider" aria-hidden="true"><span>or continue with wallet</span></div>
+
+        <!-- Wallet Options -->
+        <div class="wallet-options" role="group" aria-label="Wallet login options">
+          <button class="wallet-btn" id="connectMetamask" type="button" aria-label="Connect Metamask wallet">
+            <div class="wallet-icon metamask" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 35 33" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M32.958.5 19.363 10.49l2.528-5.978L32.958.5z" fill="#E17726"/>
+                <path d="M2.042.5l13.483 10.083-2.408-6.07L2.042.5z" fill="#E27625"/>
+                <path d="M28.229 23.516l-3.624 5.56 7.757 2.137 2.224-7.566-6.357-.131zM.443 23.647l2.21 7.566 7.742-2.137-3.61-5.56-6.342.131z" fill="#E27625"/>
+                <path d="M9.94 14.537l-2.163 3.27 7.713.352-.262-8.293L9.94 14.537zm15.12 0-5.366-4.762-.176 8.384 7.7-.352-2.158-3.27z" fill="#E27625"/>
+                <path d="m10.395 29.076 4.645-2.253-4.002-3.125-.643 5.378zM20 26.823l4.63 2.253-.629-5.378L20 26.823z" fill="#E27625"/>
+              </svg>
+            </div>
+            <div class="wallet-btn-text">
+              <span>Connect Metamask</span>
+              <small id="metamaskHint">Ethereum wallet</small>
+            </div>
+            <span class="wallet-arrow" aria-hidden="true">&#8594;</span>
+          </button>
+          <div class="wallet-status" id="metamaskStatus" role="status" aria-live="polite"></div>
+
+          <button class="wallet-btn" id="connectPhantom" type="button" aria-label="Connect Phantom wallet">
+            <div class="wallet-icon phantom" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="128" height="128" rx="64" fill="url(#ph_grad)"/>
+                <defs>
+                  <linearGradient id="ph_grad" x1="0" y1="0" x2="128" y2="128" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#534BB1"/><stop offset="1" stop-color="#551BF9"/>
+                  </linearGradient>
+                </defs>
+                <path d="M110.584 64.004c0 26.517-21.553 48.004-48.147 48.004C36.31 112.008 16 90.521 16 64.004S36.31 16 62.437 16c26.594 0 48.147 21.487 48.147 48.004z" fill="#AB9FF2"/>
+                <path d="M80.52 55.74c0 13.93-11.35 25.22-25.36 25.22-14.01 0-25.36-11.29-25.36-25.22 0-13.93 11.35-25.22 25.36-25.22 14.01 0 25.36 11.29 25.36 25.22z" fill="#fff"/>
+                <ellipse cx="46.5" cy="58" rx="5" ry="7" fill="#534BB1"/>
+                <ellipse cx="64.5" cy="58" rx="5" ry="7" fill="#534BB1"/>
+              </svg>
+            </div>
+            <div class="wallet-btn-text">
+              <span>Connect Phantom</span>
+              <small id="phantomHint">Solana wallet</small>
+            </div>
+            <span class="wallet-arrow" aria-hidden="true">&#8594;</span>
+          </button>
+          <div class="wallet-status" id="phantomStatus" role="status" aria-live="polite"></div>
+        </div>
+
+        <p style="text-align:center;margin-top:1.5rem;font-size:0.82rem;color:var(--text-muted);">
+          No account? <button class="auth-tab" data-tab="register" style="background:none;border:none;color:var(--purple-light);cursor:pointer;font-size:0.82rem;font-weight:600;padding:0;">Create one free</button>
+        </p>
+      </div>
+
+      <!-- Register Panel -->
+      <div class="auth-panel" id="panel-register" role="tabpanel" aria-labelledby="tab-register">
+        <form class="auth-form" id="registerForm" novalidate aria-label="Registration form">
+          <div class="form-group">
+            <label class="form-label" for="regName">Full name</label>
+            <input class="form-input" type="text" id="regName" name="name"
+              placeholder="Ada Lovelace" autocomplete="name" required aria-required="true">
+            <span class="form-error" id="regNameError" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="regEmail">Email address</label>
+            <input class="form-input" type="email" id="regEmail" name="email"
+              placeholder="you@example.com" autocomplete="email" required aria-required="true">
+            <span class="form-error" id="regEmailError" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="regPassword">Password</label>
+            <div class="input-wrap">
+              <input class="form-input" type="password" id="regPassword" name="password"
+                placeholder="At least 8 characters" autocomplete="new-password" required aria-required="true">
+              <button type="button" class="toggle-pass" aria-label="Show or hide password">&#128065;</button>
+            </div>
+            <span class="form-hint">Minimum 8 characters</span>
+            <span class="form-error" id="regPasswordError" role="alert" aria-live="polite"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="regConfirm">Confirm password</label>
+            <div class="input-wrap">
+              <input class="form-input" type="password" id="regConfirm" name="confirm"
+                placeholder="Repeat your password" autocomplete="new-password" required aria-required="true">
+              <button type="button" class="toggle-pass" aria-label="Show or hide password">&#128065;</button>
+            </div>
+            <span class="form-error" id="regConfirmError" role="alert" aria-live="polite"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-full" style="margin-top:0.5rem;">
+            <span class="btn-label">Create Free Account</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+
+        <div class="form-divider" aria-hidden="true"><span>or continue with wallet</span></div>
+
+        <div class="wallet-options" role="group" aria-label="Wallet signup options">
+          <button class="wallet-btn" id="connectMetamask" type="button" aria-label="Connect Metamask wallet">
+            <div class="wallet-icon metamask" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 35 33" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M32.958.5 19.363 10.49l2.528-5.978L32.958.5z" fill="#E17726"/>
+                <path d="M2.042.5l13.483 10.083-2.408-6.07L2.042.5z" fill="#E27625"/>
+                <path d="M28.229 23.516l-3.624 5.56 7.757 2.137 2.224-7.566-6.357-.131zM.443 23.647l2.21 7.566 7.742-2.137-3.61-5.56-6.342.131z" fill="#E27625"/>
+                <path d="M9.94 14.537l-2.163 3.27 7.713.352-.262-8.293L9.94 14.537zm15.12 0-5.366-4.762-.176 8.384 7.7-.352-2.158-3.27z" fill="#E27625"/>
+                <path d="m10.395 29.076 4.645-2.253-4.002-3.125-.643 5.378zM20 26.823l4.63 2.253-.629-5.378L20 26.823z" fill="#E27625"/>
+              </svg>
+            </div>
+            <div class="wallet-btn-text">
+              <span>Connect Metamask</span>
+              <small id="metamaskHint">Ethereum wallet</small>
+            </div>
+            <span class="wallet-arrow" aria-hidden="true">&#8594;</span>
+          </button>
+          <div class="wallet-status" id="metamaskStatus" role="status" aria-live="polite"></div>
+
+          <button class="wallet-btn" id="connectPhantom" type="button" aria-label="Connect Phantom wallet">
+            <div class="wallet-icon phantom" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect width="128" height="128" rx="64" fill="url(#ph2)"/>
+                <defs><linearGradient id="ph2" x1="0" y1="0" x2="128" y2="128" gradientUnits="userSpaceOnUse"><stop stop-color="#534BB1"/><stop offset="1" stop-color="#551BF9"/></linearGradient></defs>
+                <path d="M110.584 64.004c0 26.517-21.553 48.004-48.147 48.004C36.31 112.008 16 90.521 16 64.004S36.31 16 62.437 16c26.594 0 48.147 21.487 48.147 48.004z" fill="#AB9FF2"/>
+                <path d="M80.52 55.74c0 13.93-11.35 25.22-25.36 25.22-14.01 0-25.36-11.29-25.36-25.22 0-13.93 11.35-25.22 25.36-25.22 14.01 0 25.36 11.29 25.36 25.22z" fill="#fff"/>
+                <ellipse cx="46.5" cy="58" rx="5" ry="7" fill="#534BB1"/>
+                <ellipse cx="64.5" cy="58" rx="5" ry="7" fill="#534BB1"/>
+              </svg>
+            </div>
+            <div class="wallet-btn-text">
+              <span>Connect Phantom</span>
+              <small id="phantomHint">Solana wallet</small>
+            </div>
+            <span class="wallet-arrow" aria-hidden="true">&#8594;</span>
+          </button>
+          <div class="wallet-status" id="phantomStatus" role="status" aria-live="polite"></div>
+        </div>
+
+        <p style="text-align:center;margin-top:1.5rem;font-size:0.82rem;color:var(--text-muted);">
+          Already have an account? <button class="auth-tab" data-tab="login" style="background:none;border:none;color:var(--purple-light);cursor:pointer;font-size:0.82rem;font-weight:600;padding:0;">Sign in</button>
+        </p>
+      </div>
+
+      <!-- Security note -->
+      <p style="text-align:center;margin-top:1.5rem;font-size:0.75rem;color:var(--text-muted);line-height:1.5;">
+        &#128274; Your data never leaves this browser. Mempalace runs entirely locally. No cloud. No tracking.
+      </p>
+    </div>
+  </div>
+</main>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/auth.js"></script>
+<script src="assets/js/wallet.js"></script>
+</body>
+</html>

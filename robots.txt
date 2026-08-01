@@ -1,0 +1,10 @@
+# robots.txt — https://mempalace.fun/robots.txt
+# https://www.robotstxt.org/robotstxt.html
+
+User-agent: *
+Allow: /
+Disallow: /dashboard.html
+Disallow: /login.html
+
+# Sitemap
+Sitemap: https://mempalace.fun/sitemap.xml

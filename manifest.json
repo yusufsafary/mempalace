@@ -1,0 +1,17 @@
+{
+  "name": "Mempalace",
+  "short_name": "Mempalace",
+  "description": "The AI Memory OS That Never Forgets. 96.6% LongMemEval score. 100% local and free.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0a0a14",
+  "theme_color": "#00F5FF",
+  "icons": [
+    {
+      "src": "assets/img/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

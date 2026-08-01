@@ -3,13 +3,129 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>How-To Guide - Mempalace</title>
-  <meta name="description" content="Complete guide to installing, configuring, and using Mempalace. From pip install to MCP integration with Claude in under 10 minutes.">
+  <title>How to Install Mempalace — Complete AI Memory Setup Guide</title>
+  <meta name="description" content="Step-by-step guide to installing Mempalace, mining your AI conversation history, and connecting it to Claude via MCP. Perfect AI memory in under 10 minutes.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Mempalace">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://mempalace.fun/how-to.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mempalace">
+  <meta property="og:url" content="https://mempalace.fun/how-to.html">
+  <meta property="og:title" content="How to Install Mempalace — Complete AI Memory Setup Guide">
+  <meta property="og:description" content="Step-by-step guide to installing Mempalace, mining your AI conversation history, and connecting it to Claude via MCP. Perfect AI memory in under 10 minutes.">
+  <meta property="og:image" content="https://mempalace.fun/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to Install Mempalace — Complete AI Memory Setup Guide">
+  <meta name="twitter:description" content="Step-by-step guide to installing Mempalace, mining your AI conversation history, and connecting it to Claude via MCP. Perfect AI memory in under 10 minutes.">
+  <meta name="twitter:image" content="https://mempalace.fun/assets/img/og.png">
+  <meta name="twitter:image:alt" content="Mempalace — AI Memory OS">
+
+  <!-- Icons & PWA -->
   <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+  <link rel="apple-touch-icon" href="assets/img/logo.svg">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://mempalace.fun/how-to.html",
+      "url": "https://mempalace.fun/how-to.html",
+      "name": "How to Install and Use Mempalace — Complete Setup Guide",
+      "description": "Step-by-step guide to installing Mempalace, mining your data, and connecting it to Claude via MCP. From pip install to perfect AI memory in under 10 minutes.",
+      "isPartOf": { "@id": "https://mempalace.fun/#website" },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mempalace.fun/" },
+          { "@type": "ListItem", "position": 2, "name": "How-To Guide", "item": "https://mempalace.fun/how-to.html" }
+        ]
+      }
+    },
+    {
+      "@type": "HowTo",
+      "name": "How to Set Up Mempalace AI Memory",
+      "description": "Install and configure Mempalace to give your AI perfect long-term memory in under 10 minutes.",
+      "totalTime": "PT10M",
+      "supply": [
+        { "@type": "HowToSupply", "name": "Python 3.9+" },
+        { "@type": "HowToSupply", "name": "pip package manager" },
+        { "@type": "HowToSupply", "name": "Claude Desktop (optional, for MCP)" }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Install Mempalace",
+          "text": "Install via pip: pip install mempalace. Then run mempalace init to define your world — collaborators, projects, and preferences. Takes two minutes.",
+          "url": "https://mempalace.fun/how-to.html#install"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Mine Your Data",
+          "text": "Run mempalace mine --mode convos to import your Claude or ChatGPT conversation exports. Use --mode project for code repositories. Mempalace auto-classifies every memory into decisions, preferences, milestones, problems, and emotional context.",
+          "url": "https://mempalace.fun/how-to.html#mine"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Connect to Claude via MCP",
+          "text": "Add Mempalace as an MCP server in your claude_desktop_config.json. Claude will automatically call mempalace_search whenever it needs context about you, your projects, or your past decisions.",
+          "url": "https://mempalace.fun/how-to.html#mcp"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I install Mempalace?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Install Mempalace with pip install mempalace, then run mempalace init to set up your palace. Full instructions are at mempalace.fun/how-to.html."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Mempalace send my data to the cloud?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Mempalace is 100% local. No data ever leaves your machine. The MCP server runs locally and only responds to tools from your local Claude or IDE instance. There is no telemetry."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What data can I mine with Mempalace?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mempalace can mine three data types: projects (code and documentation), conversations (Claude, ChatGPT, Slack exports), and general files (auto-classified into decisions, preferences, milestones, problems, and emotional context). Everything is indexed to ChromaDB."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 
@@ -42,8 +158,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="how-to.html" class="active">How-To</a></li>
-        <li><a href="https://github.com/addyosmani/mempalace" target="_blank" rel="noopener">GitHub</a></li>
-      </ul>
+        </ul>
       <div class="nav-actions">
         <a href="login.html" class="btn btn-outline btn-sm" id="navLoginBtn">Sign In</a>
         <a href="dashboard.html" class="btn btn-primary btn-sm" id="navUserBtn" style="display:none;">Dashboard</a>
@@ -59,7 +174,6 @@
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
   <a href="how-to.html" class="active">How-To</a>
-  <a href="https://github.com/addyosmani/mempalace" target="_blank" rel="noopener">GitHub</a>
   <a href="login.html" class="btn btn-primary">Sign In</a>
 </div>
 
@@ -240,7 +354,7 @@ mempalace search "postgres config" --top 10</pre>
             <li><code style="color:var(--cyan);font-family:var(--font-mono);">mempalace_wake_up</code> - Load full palace context</li>
             <li><code style="color:var(--cyan);font-family:var(--font-mono);">mempalace_diary</code> - Write to agent journal</li>
             <li><code style="color:var(--cyan);font-family:var(--font-mono);">mempalace_compress</code> - Compress context to AAAK</li>
-            <li>...and 14 more. See the <a href="https://github.com/addyosmani/mempalace/blob/main/mempalace/mcp_server.py" target="_blank" rel="noopener" style="color:var(--purple-light);">MCP server source</a> for the full list.</li>
+            <li>...and 14 more. See the <span style="color:var(--purple-light);">MCP server source</span> for the full list.</li>
           </ul>
 
           <div style="background:rgba(123,47,255,0.08);border:1px solid rgba(123,47,255,0.25);border-radius:var(--radius);padding:1rem 1.25rem;margin:1.25rem 0;">
@@ -375,7 +489,7 @@ mempalace decompress compressed.aaak</pre>
                 Is Mempalace safe to use at work?
                 <span style="color:var(--cyan);">+</span>
               </summary>
-              <p style="margin-top:1rem;font-size:0.9rem;">Yes. No data leaves your machine. You choose which directories to mine - you can exclude anything sensitive. The MCP server runs locally and only responds to tools from your local Claude or IDE instance. There is no telemetry. Review the source code in the <a href="https://github.com/addyosmani/mempalace" target="_blank" rel="noopener" style="color:var(--purple-light);">GitHub repo</a> to verify.</p>
+              <p style="margin-top:1rem;font-size:0.9rem;">Yes. No data leaves your machine. You choose which directories to mine - you can exclude anything sensitive. The MCP server runs locally and only responds to tools from your local Claude or IDE instance. There is no telemetry. Review the source code in the our codebase to verify.</p>
             </details>
           </div>
         </section>
@@ -386,9 +500,8 @@ mempalace decompress compressed.aaak</pre>
           <p style="margin-bottom:1.5rem;">Create a free account to access the demo dashboard, or go straight to the GitHub repo and start using Mempalace locally.</p>
           <div style="display:flex;flex-wrap:wrap;gap:0.75rem;">
             <a href="login.html" class="btn btn-primary">Create Account</a>
-            <a href="https://github.com/addyosmani/mempalace" target="_blank" rel="noopener" class="btn btn-outline">View on GitHub</a>
-            <a href="https://github.com/addyosmani/mempalace/blob/main/examples/basic_mining.py" target="_blank" rel="noopener" class="btn btn-ghost">See Examples</a>
-          </div>
+            <a href="how-to.html" class="btn btn-outline">Full Guide</a>
+            </div>
         </section>
 
       </article>
@@ -436,16 +549,13 @@ mempalace decompress compressed.aaak</pre>
         <h4>Company</h4>
         <ul role="list">
           <li><a href="about.html">About</a></li>
-          <li><a href="https://github.com/addyosmani/mempalace/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">Contributing</a></li>
-          <li><a href="https://github.com/addyosmani/mempalace/blob/main/LICENSE" target="_blank" rel="noopener">License</a></li>
-        </ul>
+          </ul>
       </div>
       <div class="footer-col">
         <h4>Legal</h4>
         <ul role="list">
           <li><a href="cookies.html">Cookie Policy</a></li>
-          <li><a href="https://github.com/addyosmani/mempalace/blob/main/LICENSE" target="_blank" rel="noopener">Terms of Use</a></li>
-        </ul>
+          </ul>
       </div>
     </div>
     <div class="footer-bottom">
@@ -453,8 +563,7 @@ mempalace decompress compressed.aaak</pre>
       <nav class="footer-bottom-links" aria-label="Footer legal links">
         <a href="cookies.html">Cookies</a>
         <a href="about.html">About</a>
-        <a href="https://github.com/addyosmani/mempalace" target="_blank" rel="noopener">GitHub</a>
-      </nav>
+        </nav>
     </div>
   </div>
 </footer>

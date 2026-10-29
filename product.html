@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product - Mempalace | Features, Benchmarks &amp; How It Works</title>
+  <meta name="description" content="Mempalace is the highest-scoring AI memory system ever benchmarked. 96.6% LongMemEval score. Store every conversation and decision. Find anything instantly. 100% local, free, and open source.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Mempalace">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://mempalace.fun/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mempalace">
+  <meta property="og:url" content="https://mempalace.fun/">
+  <meta property="og:title" content="Mempalace — The AI Memory OS That Never Forgets">
+  <meta property="og:description" content="Mempalace is the highest-scoring AI memory system ever benchmarked. 96.6% LongMemEval score. Store every conversation and decision. Find anything instantly. 100% local, free, and open source.">
+  <meta property="og:image" content="https://mempalace.fun/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mempalace — The AI Memory OS That Never Forgets">
+  <meta name="twitter:description" content="Mempalace is the highest-scoring AI memory system ever benchmarked. 96.6% LongMemEval score. Store every conversation and decision. Find anything instantly. 100% local, free, and open source.">
+  <meta name="twitter:image" content="https://mempalace.fun/assets/img/og.png">
+  <meta name="twitter:image:alt" content="Mempalace — AI Memory OS">
+
+  <!-- Icons & PWA -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/logo.svg">
+  <link rel="apple-touch-icon" href="assets/img/logo.svg">
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://mempalace.fun/#website",
+      "url": "https://mempalace.fun/",
+      "name": "Mempalace",
+      "description": "The AI Memory OS That Never Forgets",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Mempalace",
+        "url": "https://mempalace.fun",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://mempalace.fun/assets/img/logo.svg"
+        }
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://mempalace.fun/#software",
+      "name": "Mempalace",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "macOS, Windows, Linux",
+      "description": "The highest-scoring AI memory system ever benchmarked. 96.6% recall on LongMemEval. Store every conversation, decision, and context. Find anything in milliseconds. 100% local, free, and open source.",
+      "url": "https://mempalace.fun/",
+      "image": "https://mempalace.fun/assets/img/og.png",
+      "softwareVersion": "1.0",
+      "license": "https://opensource.org/licenses/MIT",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "Palace Structure memory organization",
+        "AAAK 30x lossless compression",
+        "100% local — no cloud, no API",
+        "MCP integration with 19 tools",
+        "Knowledge graph with temporal queries",
+        "96.6% LongMemEval benchmark score"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://mempalace.fun/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Mempalace?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mempalace is the highest-scoring AI memory system ever benchmarked, achieving 96.6% recall on LongMemEval. It organizes AI memory into a palace structure — wings, halls, and rooms — letting any AI (Claude, ChatGPT, Llama, Mistral) remember everything across sessions. It runs 100% locally with no cloud or API required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Mempalace free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Mempalace is completely free and open source under the MIT license. There are no paid tiers, no subscriptions, and no data ever leaves your machine."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What AI models work with Mempalace?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mempalace works with any model that reads text: Claude, ChatGPT, Gemini, Llama, Mistral, and any MCP-compatible tool. The AAAK compression format requires no decoder — it is plain text any AI can read."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is AAAK compression?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AAAK is a lossless shorthand dialect designed for AI agents. It compresses memories 30x with zero information loss, allowing your AI to load months of context in just 120 tokens."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Mempalace compare to other AI memory tools?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mempalace scored 96.6% on the LongMemEval benchmark — higher than any free or paid alternative. Competing tools like MemGPT, Zep, and Letta scored significantly lower. It also costs nothing and requires no external API."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Mempalace home">
+        <div class="logo-icon">
+          <svg class="logo-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="nl1" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#F0B90B"/>
+                <stop offset="100%" stop-color="#C9980A"/>
+              </linearGradient>
+              <linearGradient id="nl2" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#C9980A"/>
+                <stop offset="100%" stop-color="#FFE9A8"/>
+              </linearGradient>
+            </defs>
+            <rect x="6" y="18" width="5" height="22" rx="1.5" fill="url(#nl1)" opacity="0.9"/>
+            <rect x="14" y="14" width="5" height="26" rx="1.5" fill="url(#nl1)"/>
+            <rect x="22" y="10" width="5" height="30" rx="1.5" fill="url(#nl2)"/>
+            <rect x="30" y="14" width="5" height="26" rx="1.5" fill="url(#nl1)"/>
+            <rect x="38" y="18" width="5" height="22" rx="1.5" fill="url(#nl1)" opacity="0.9"/>
+            <rect x="4" y="7" width="40" height="5" rx="2" fill="url(#nl2)" opacity="0.95"/>
+            <rect x="3" y="40" width="42" height="4" rx="2" fill="url(#nl1)" opacity="0.8"/>
+          </svg>
+        </div>
+        <span><span class="logo-text-mp">Mem</span><span class="logo-text-rest">palace</span></span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#agentic-pass" style="color:#F0B90B;font-weight:700;">Agentic Pass</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="demo.html">Demo</a></li>
+        <li><a href="demo.html">Demo</a>
+  <a href="how-to.html">How-To</a></li>
+        </ul>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-outline btn-sm" id="navLoginBtn">Sign In</a>
+        <a href="dashboard.html" class="btn btn-primary btn-sm" id="navUserBtn" style="display:none;">Dashboard</a>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" role="navigation" aria-label="Mobile navigation">
+  <a href="index.html" class="active">Home</a>
+  <a href="index.html#agentic-pass" style="color:#F0B90B;font-weight:700;">Agentic Pass</a>
+  <a href="about.html">About</a>
+  <a href="demo.html">Demo</a>
+  <a href="how-to.html">How-To</a>
+  <a href="login.html" class="btn btn-primary">Sign In</a>
+</div>
+
+<!-- Features -->
+<section class="features" id="features" aria-labelledby="features-heading">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-tag">Core Technology</span>
+      <h2 id="features-heading" class="section-title">Built on three pillars</h2>
+      <p class="section-subtitle">Every design decision in Mempalace serves one goal: your AI should know everything you've ever told it.</p>
+    </div>
+
+    <div class="features-grid">
+      <article class="card feature-card reveal" aria-labelledby="feat1-title">
+        <div class="feature-icon purple" aria-hidden="true">&#127963;</div>
+        <h3 id="feat1-title">The Palace Structure</h3>
+        <p>Ancient Greek orators memorized speeches by placing ideas in rooms of an imaginary palace. Mempalace applies this to AI memory: wings (people and projects), halls (memory types), rooms (specific ideas). That structure alone boosts retrieval by 34%.</p>
+      </article>
+
+      <article class="card feature-card reveal" aria-labelledby="feat2-title">
+        <div class="feature-icon cyan" aria-hidden="true">&#128268;</div>
+        <h3 id="feat2-title">AAAK Compression</h3>
+        <p>A lossless shorthand dialect designed for AI agents. 30x compression with zero information loss. Your AI loads months of context in 120 tokens. Works with any model that reads text - Claude, GPT, Gemini, Llama, Mistral. No decoder required.</p>
+      </article>
+
+      <article class="card feature-card reveal" aria-labelledby="feat3-title">
+        <div class="feature-icon gold" aria-hidden="true">&#128274;</div>
+        <h3 id="feat3-title">100% Local</h3>
+        <p>Runs entirely on your machine. No external APIs required. No cloud sync. No data leaves your device. Works with local models like Llama and Mistral. Your memories stay yours, forever.</p>
+      </article>
+
+      <article class="card feature-card reveal" aria-labelledby="feat4-title">
+        <div class="feature-icon green" aria-hidden="true">&#128279;</div>
+        <h3 id="feat4-title">MCP Integration</h3>
+        <p>19 tools available through Model Context Protocol. Connect once, and your AI uses Mempalace automatically. Ask Claude anything - it calls mempalace_search and answers with your own context. No manual commands.</p>
+      </article>
+
+      <article class="card feature-card reveal" aria-labelledby="feat5-title">
+        <div class="feature-icon rose" aria-hidden="true">&#128200;</div>
+        <h3 id="feat5-title">Knowledge Graph</h3>
+        <p>A temporal entity-relationship graph built on SQLite. Time-filtered queries, fact invalidation, BFS traversal across wings. Your AI knows not just what you decided, but when and why you changed your mind.</p>
+      </article>
+
+      <article class="card feature-card reveal" aria-labelledby="feat6-title">
+        <div class="feature-icon blue" aria-hidden="true">&#129504;</div>
+        <h3 id="feat6-title">Three Mining Modes</h3>
+        <p>Mine projects (code and docs), convos (Claude, ChatGPT, Slack exports), or general (auto-classifies into decisions, preferences, milestones, problems, and emotional context). Everything indexed to ChromaDB.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works -->
+<section class="how-it-works" id="how-it-works" aria-labelledby="howitworks-heading">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-tag">Workflow</span>
+      <h2 id="howitworks-heading" class="section-title">Set up once. Works forever.</h2>
+      <p class="section-subtitle">Three steps from install to having an AI with perfect memory of your entire working history.</p>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step-card reveal">
+        <div class="step-number">1</div>
+        <h3>Install and Init</h3>
+        <p>Install via pip. Run <code style="color:var(--cyan);font-family:var(--font-mono);background:rgba(0,245,255,0.1);padding:2px 6px;border-radius:4px;">mempalace init</code> to define your world - who you work with, what your projects are. Takes two minutes.</p>
+      </div>
+
+      <div class="step-card reveal">
+        <div class="step-number">2</div>
+        <h3>Mine Your Data</h3>
+        <p>Point Mempalace at your chat exports, code directories, and notes. It mines and indexes everything - decisions, preferences, milestones, conversations - into your palace.</p>
+      </div>
+
+      <div class="step-card reveal">
+        <div class="step-number">3</div>
+        <h3>AI Remembers Everything</h3>
+        <p>Connect via MCP or use wake-up context. Your AI now has access to your entire history. Ask it anything you've ever discussed. It searches your palace and answers with your own words.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benchmarks -->
+<section class="benchmarks" id="benchmarks" aria-labelledby="bench-heading">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-tag">Benchmarks</span>
+      <h2 id="bench-heading" class="section-title">Numbers that speak for themselves</h2>
+      <p class="section-subtitle">Highest LongMemEval score ever published. Reproducible - all benchmark runners are open source in the repo.</p>
+    </div>
+
+    <div class="bench-table-wrap reveal">
+      <table class="bench-table" role="table" aria-label="Benchmark comparison">
+        <thead>
+          <tr>
+            <th scope="col">System</th>
+            <th scope="col">LongMemEval R@5</th>
+            <th scope="col">Score</th>
+            <th scope="col">Cost</th>
+            <th scope="col">API Required</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="highlight-row">
+            <td><strong>Mempalace</strong> <span style="font-size:0.75rem;color:var(--cyan);background:rgba(0,245,255,0.1);padding:2px 8px;border-radius:100px;margin-left:0.5rem;">You are here</span></td>
+            <td>
+              <div class="score-bar-wrap">
+                <span style="min-width:42px;color:var(--cyan);font-weight:700;">96.6%</span>
+                <div class="score-bar"><div class="score-fill" data-width="96.6" style="width:0%"></div></div>
+              </div>
+            </td>
+            <td style="color:var(--cyan);">96.6 / 100</td>
+            <td style="color:#00DC82;">Free</td>
+            <td>No</td>
+          </tr>
+          <tr class="highlight-row">
+            <td><strong>Mempalace + Haiku rerank</strong></td>
+            <td>
+              <div class="score-bar-wrap">
+                <span style="min-width:42px;color:var(--gold);font-weight:700;">100%</span>
+                <div class="score-bar"><div class="score-fill gold" data-width="100" style="width:0%"></div></div>
+              </div>
+            </td>
+            <td style="color:var(--gold);">100 / 100</td>
+            <td style="color:var(--text-muted);">Minimal</td>
+            <td>Haiku only</td>
+          </tr>
+          <tr>
+            <td>Mem.ai Pro</td>
+            <td>
+              <div class="score-bar-wrap">
+                <span style="min-width:42px;">72%</span>
+                <div class="score-bar"><div class="score-fill" data-width="72" style="width:0%;background:linear-gradient(90deg,#556080,#8899BB)"></div></div>
+              </div>
+            </td>
+            <td>72 / 100</td>
+            <td style="color:#FF8080;">$14.99/mo</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>OpenAI Memory</td>
+            <td>
+              <div class="score-bar-wrap">
+                <span style="min-width:42px;">68%</span>
+                <div class="score-bar"><div class="score-fill" data-width="68" style="width:0%;background:linear-gradient(90deg,#556080,#8899BB)"></div></div>
+              </div>
+            </td>
+            <td>68 / 100</td>
+            <td style="color:#FF8080;">ChatGPT Plus</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td>Zep Cloud</td>
+            <td>
+              <div class="score-bar-wrap">
+                <span style="min-width:42px;">61%</span>
+                <div class="score-bar"><div class="score-fill" data-width="61" style="width:0%;background:linear-gradient(90deg,#556080,#8899BB)"></div></div>
+              </div>
+            </td>
+            <td>61 / 100</td>
+            <td style="color:#FF8080;">Paid</td>
+            <td>Yes</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="text-align:center;margin-top:1rem;font-size:0.8rem;color:var(--text-muted);">
+      All benchmarks are reproducible. Runners available in <span style="color:var(--purple-light);">benchmarks/</span>. Results verified on LongMemEval dataset.
+    </p>
+  </div>
+</section>
+
+<!-- Code Example -->
+<section style="background:var(--bg-primary);padding:5rem 0;" aria-labelledby="code-heading">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:3rem;">
+      <span class="section-tag">Quick Start</span>
+      <h2 id="code-heading">Five commands to perfect AI memory</h2>
+    </div>
+    <div class="code-block reveal" style="max-width:700px;margin:0 auto;">
+      <button class="copy-btn" aria-label="Copy code">Copy</button>
+      <pre>pip install mempalace
+
+# Tell Mempalace your world
+mempalace init ~/projects/myapp
+
+# Mine your data
+mempalace mine ~/projects/myapp
+mempalace mine ~/chats/ --mode convos
+
+# Search anything
+mempalace search "why did we switch to GraphQL"
+
+# Connect to Claude (MCP)
+claude mcp add mempalace -- python -m mempalace.mcp_server</pre>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" aria-labelledby="cta-heading">
+  <div class="container" style="position:relative;z-index:1;">
+    <span class="section-tag">Get Started</span>
+    <h2 id="cta-heading">Your AI has been forgetting.<br>Fix it today.</h2>
+    <p>Mempalace is free, open source, and runs entirely on your machine. No subscription. No cloud. No compromise.</p>
+    <div class="cta-actions">
+      <a href="how-to.html" class="btn btn-cyan btn-lg">Read the Guide</a>
+      <a href="login.html" class="btn btn-primary btn-lg">Create Account</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" aria-label="Mempalace home">
+          <div class="logo-icon" style="width:32px;height:32px;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="fl1" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#F0B90B"/><stop offset="100%" stop-color="#C9980A"/>
+                </linearGradient>
+                <linearGradient id="fl2" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#C9980A"/><stop offset="100%" stop-color="#FFE9A8"/>
+                </linearGradient>
+              </defs>
+              <rect x="6" y="18" width="5" height="22" rx="1.5" fill="url(#fl1)" opacity="0.9"/>
+              <rect x="14" y="14" width="5" height="26" rx="1.5" fill="url(#fl1)"/>
+              <rect x="22" y="10" width="5" height="30" rx="1.5" fill="url(#fl2)"/>
+              <rect x="30" y="14" width="5" height="26" rx="1.5" fill="url(#fl1)"/>
+              <rect x="38" y="18" width="5" height="22" rx="1.5" fill="url(#fl1)" opacity="0.9"/>
+              <rect x="4" y="7" width="40" height="5" rx="2" fill="url(#fl2)" opacity="0.95"/>
+              <rect x="3" y="40" width="42" height="4" rx="2" fill="url(#fl1)" opacity="0.8"/>
+            </svg>
+          </div>
+          <span><span class="logo-text-mp">Mem</span><span class="logo-text-rest">palace</span></span>
+        </a>
+        <p>The highest-scoring AI memory system ever benchmarked. Free and open source.</p>
+        <div class="footer-social" role="list" aria-label="Social links">
+          <a href="https://discord.gg/mempalace" target="_blank" rel="noopener" role="listitem" aria-label="Discord">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057.102 18.08.114 18.1.132 18.11a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul role="list">
+          <li><a href="product.html#features">Features</a></li>
+          <li><a href="demo.html">Live Demo</a></li>
+          <li><a href="product.html#benchmarks">Benchmarks</a></li>
+          <li><a href="how-to.html">How-To Guide</a></li>
+          </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul role="list">
+          <li><a href="about.html">About</a></li>
+          </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul role="list">
+          <li><a href="cookies.html">Cookie Policy</a></li>
+          </ul>
+      </div>
+    </div>
+
+    <div class="footer-badge">
+      <a href="https://bscscan.com/address/0x2A136cd7fF235c480d02b5195E29FFc300DC55fe" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;border:1px solid #F0B90B;border-radius:12px;padding:12px 20px;color:#F0B90B;text-decoration:none;font-weight:700;">
+        <span aria-hidden="true" style="font-size:18px;">&#9670;</span>
+        <span>Mempalace Agentic Pass &middot; BNB Chain<br><small style="font-weight:400;opacity:.85;">Exclusively for Binance Agentic Wallet</small></span>
+      </a>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 Mempalace. Open source under MIT License.</p>
+      <nav class="footer-bottom-links" aria-label="Footer legal links">
+        <a href="cookies.html">Cookies</a>
+        <a href="about.html">About</a>
+        </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- Cookie Banner -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent" aria-live="polite">
+  <div class="cookie-inner">
+    <p>We use minimal analytics cookies to understand how Mempalace is used. Read our <a href="cookies.html">Cookie Policy</a> for details.</p>
+    <div class="cookie-actions">
+      <button class="btn btn-outline btn-sm" id="cookieDecline">Decline</button>
+      <button class="btn btn-primary btn-sm" id="cookieAccept">Accept</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var C = "0x2A136cd7fF235c480d02b5195E29FFc300DC55fe";
+  var RPCS = ["https://bsc-dataseed.bnbchain.org","https://bsc-dataseed-public.bnbchain.org","https://bsc-dataseed.nariox.org"];
+  var SEL = { minted:"0xa2309ff8", open:"0x24bbd049", holds:"0x11213086", free:"0x61c0b6a0", bal:"0x70a08231", ownerOf:"0x6352211e" };
+  var MAX = 4444, FREE = 444, lastMinted = -1, shown = 0;
+  function rpc(data){
+    var chain = Promise.reject();
+    RPCS.forEach(function(url){
+      chain = chain.catch(function(){
+        return fetch(url,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({jsonrpc:"2.0",id:1,method:"eth_call",params:[{to:C,data:data},"latest"]})})
+          .then(function(r){return r.json();})
+          .then(function(j){ if(!j.result) throw new Error("no result"); return j.result; });
+      });
+    });
+    return chain;
+  }
+  function num(hex){ return parseInt(hex,16); }
+  function padAddr(a){ return "000000000000000000000000" + a.slice(2).toLowerCase(); }
+  function padNum(n){ var h = n.toString(16); return "00000000000000000000000000000000000000000000000000000000".slice(0,64-h.length) + h; }
+  function short(a){ return a.slice(0,6) + "\u2026" + a.slice(-4); }
+  function $(id){ return document.getElementById(id); }
+  function animate(to){
+    var from = shown, t0 = null;
+    function step(ts){ if(!t0) t0 = ts; var p = Math.min((ts-t0)/900,1); var e = 1-Math.pow(1-p,3); var v = Math.round(from + (to-from)*e); $("mp-minted").textContent = v.toLocaleString("en-US"); if(p<1) requestAnimationFrame(step); else shown = to; }
+    requestAnimationFrame(step);
+  }
+  function refresh(){
+    Promise.all([rpc(SEL.minted), rpc(SEL.open)]).then(function(rs){
+      var minted = num(rs[0]), open = num(rs[1]) === 1;
+      var chip = $("mp-chip"), chipText = $("mp-chip-text");
+      chip.className = "mp-chip" + (open ? " mp-live" : "");
+      chipText.textContent = open ? "Mint live" : "Coming soon";
+      if(lastMinted >= 0 && minted > lastMinted){
+        var b = $("mp-new"); b.style.display = "inline-block"; b.textContent = "+" + (minted-lastMinted) + " new";
+        $("mp-minted").classList.remove("mp-flash"); void $("mp-minted").offsetWidth; $("mp-minted").classList.add("mp-flash");
+        setTimeout(function(){ b.style.display = "none"; }, 6000);
+      }
+      lastMinted = minted;
+      animate(minted);
+      $("mp-ogleft").textContent = Math.max(FREE-minted,0).toLocaleString("en-US");
+      var ogp = Math.min(minted,FREE)/FREE*100, totp = minted/MAX*100;
+      $("mp-ogbar").style.width = ogp + "%"; $("mp-totbar").style.width = totp + "%";
+      $("mp-ogpct").textContent = ogp.toFixed(1) + "%"; $("mp-totpct").textContent = totp.toFixed(2) + "%";
+      var phase = $("mp-phase");
+      if(minted >= MAX) phase.textContent = "Sold out \u00B7 all 4,444 passes were claimed.";
+      else if(!open) phase.textContent = "Mint opens soon \u00B7 the OG 444 are free, one per wallet, for Agent ID holders.";
+      else if(minted < FREE) phase.textContent = "OG phase \u00B7 " + (FREE-minted) + " free passes left \u00B7 1 per wallet.";
+      else phase.textContent = "Agentic phase \u00B7 " + minted.toLocaleString("en-US") + " minted \u00B7 mint is free \u2014 few-cents anti-bot filter only.";
+      if(minted > 0){
+        var ids = []; for(var i = minted; i >= Math.max(minted-5,1); i--) ids.push(i);
+        Promise.all(ids.map(function(id){ return rpc(SEL.ownerOf + padNum(id)).then(function(r){ return {id:id, owner:"0x"+r.slice(-40)}; }).catch(function(){ return null; }); }))
+        .then(function(rows){
+          rows = rows.filter(Boolean);
+          if(rows.length){ $("mp-recent-wrap").style.display = "block"; $("mp-recent").innerHTML = rows.map(function(x){ return "Pass #" + x.id + " \u00B7 " + short(x.owner); }).join("<br>"); }
+        }).catch(function(){});
+      }
+    }).catch(function(){ $("mp-phase").textContent = "Could not reach the chain \u2014 retrying\u2026"; });
+  }
+  refresh(); setInterval(refresh, 15000);
+  document.querySelectorAll("[data-copy]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var t = $(btn.getAttribute("data-copy")).textContent;
+      navigator.clipboard.writeText(t).then(function(){ btn.textContent = "Copied"; setTimeout(function(){ btn.textContent = "Copy"; }, 1600); });
+    });
+  });
+  $("mp-check-btn").addEventListener("click", function(){
+    var a = $("mp-wallet").value.trim(), out = $("mp-check-out");
+    if(!/^0x[0-9a-fA-F]{40}$/.test(a)){ out.textContent = "Enter a valid 0x wallet address."; return; }
+    out.textContent = "Checking\u2026";
+    Promise.all([rpc(SEL.holds + padAddr(a)), rpc(SEL.free + padAddr(a)), rpc(SEL.bal + padAddr(a))]).then(function(rs){
+      var holds = num(rs[0]) === 1, claimed = num(rs[1]) === 1, bal = num(rs[2]);
+      var parts = [];
+      parts.push(holds ? "Holds a SPACE ID Agent ID \u2014 eligible to mint." : "No Agent ID \u2014 this wallet cannot mint.");
+      if(holds) parts.push(claimed ? "OG free pass already claimed." : "OG free pass not yet claimed.");
+      parts.push("Passes held: " + bal + ".");
+      out.textContent = parts.join(" ");
+    }).catch(function(){ out.textContent = "Check failed \u2014 try again."; });
+  });
+})();
+</script>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

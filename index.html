@@ -148,12 +148,12 @@
           <svg class="logo-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true">
             <defs>
               <linearGradient id="nl1" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#00F5FF"/>
-                <stop offset="100%" stop-color="#7B2FFF"/>
+                <stop offset="0%" stop-color="#F0B90B"/>
+                <stop offset="100%" stop-color="#C9980A"/>
               </linearGradient>
               <linearGradient id="nl2" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stop-color="#7B2FFF"/>
-                <stop offset="100%" stop-color="#FFD700"/>
+                <stop offset="0%" stop-color="#C9980A"/>
+                <stop offset="100%" stop-color="#FFE9A8"/>
               </linearGradient>
             </defs>
             <rect x="6" y="18" width="5" height="22" rx="1.5" fill="url(#nl1)" opacity="0.9"/>
@@ -171,6 +171,7 @@
       <ul class="nav-links" role="list">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="index.html#agentic-pass" style="color:#F0B90B;font-weight:700;">Agentic Pass</a></li>
+        <li><a href="product.html">Product</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="demo.html">Demo</a></li>
         <li><a href="demo.html">Demo</a>
@@ -192,6 +193,7 @@
 <div class="mobile-menu" role="navigation" aria-label="Mobile navigation">
   <a href="index.html" class="active">Home</a>
   <a href="index.html#agentic-pass" style="color:#F0B90B;font-weight:700;">Agentic Pass</a>
+  <a href="product.html">Product</a>
   <a href="about.html">About</a>
   <a href="demo.html">Demo</a>
   <a href="how-to.html">How-To</a>
@@ -200,13 +202,6 @@
 
 <!-- Hero -->
 <section class="hero" aria-labelledby="hero-heading">
-  <canvas id="heroCanvas" style="position:absolute;inset:0;width:100%;height:100%;opacity:0.6;" aria-hidden="true"></canvas>
-  <div class="hero-bg" aria-hidden="true">
-    <div class="hero-bg-grid"></div>
-    <div class="hero-orb hero-orb-1"></div>
-    <div class="hero-orb hero-orb-2"></div>
-    <div class="hero-orb hero-orb-3"></div>
-  </div>
 
   <div class="container">
     <div class="hero-content">
@@ -218,7 +213,7 @@
       <h1 id="hero-heading">
         The Memory OS<br>
         for AI that<br>
-        <span class="gradient-text">Never Forgets</span>
+        <span style="color:#F0B90B;">Never Forgets</span>
       </h1>
 
       <p class="lead">
@@ -226,32 +221,10 @@
       </p>
 
       <div class="hero-actions">
-        <a href="how-to.html" class="btn btn-cyan btn-lg">
-          <span>Get Started Free</span>
-          <span aria-hidden="true">&#8594;</span>
-        </a>
-        <a href="how-to.html" class="btn btn-outline btn-lg"><span>Read the Docs</span></a>
         <a href="#agentic-pass" class="btn btn-lg" style="background:#F0B90B;color:#0b0e11;font-weight:800;border:1px solid #F0B90B;"><span>Mint the Agentic Pass</span></a>
+        <a href="how-to.html" class="btn btn-outline btn-lg"><span>Get Started Free</span><span aria-hidden="true">&#8594;</span></a>
       </div>
 
-      <div class="hero-stats" role="list" aria-label="Key metrics">
-        <div class="stat-item" role="listitem">
-          <div class="stat-value gradient-text-purple">96.6%</div>
-          <div class="stat-label">LongMemEval R@5</div>
-        </div>
-        <div class="stat-item" role="listitem">
-          <div class="stat-value" style="color:var(--gold);">100%</div>
-          <div class="stat-label">with Haiku rerank</div>
-        </div>
-        <div class="stat-item" role="listitem">
-          <div class="stat-value gradient-text-purple">+34%</div>
-          <div class="stat-label">Palace structure boost</div>
-        </div>
-        <div class="stat-item" role="listitem">
-          <div class="stat-value" style="color:var(--cyan);">$0</div>
-          <div class="stat-label">No subscription needed</div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -345,215 +318,25 @@ baw contract-call execute --requestId &lt;from-preview&gt;</span></div>
   </div>
 </section>
 
-<!-- Features -->
-<section class="features" aria-labelledby="features-heading">
+<!-- Explore -->
+<style>
+.ex-wrap{padding:72px 0 84px;}
+.ex-row{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:20px 4px;border-top:1px solid rgba(255,255,255,.09);text-decoration:none;color:inherit;}
+.ex-row:last-child{border-bottom:1px solid rgba(255,255,255,.09);}
+.ex-row b{font-size:19px;font-weight:700;}
+.ex-row span{opacity:.72;font-size:14.5px;text-align:right;}
+.ex-row i{color:#F0B90B;font-style:normal;font-weight:800;}
+.ex-row:hover b{color:#F0B90B;}
+@media(max-width:700px){.ex-row{flex-direction:column;gap:4px;}.ex-row span{text-align:left;}}
+</style>
+<section class="ex-wrap" aria-label="Explore Mempalace">
   <div class="container">
-    <div class="text-center">
-      <span class="section-tag">Core Technology</span>
-      <h2 id="features-heading" class="section-title">Built on three pillars</h2>
-      <p class="section-subtitle">Every design decision in Mempalace serves one goal: your AI should know everything you've ever told it.</p>
-    </div>
-
-    <div class="features-grid">
-      <article class="card feature-card reveal" aria-labelledby="feat1-title">
-        <div class="feature-icon purple" aria-hidden="true">&#127963;</div>
-        <h3 id="feat1-title">The Palace Structure</h3>
-        <p>Ancient Greek orators memorized speeches by placing ideas in rooms of an imaginary palace. Mempalace applies this to AI memory: wings (people and projects), halls (memory types), rooms (specific ideas). That structure alone boosts retrieval by 34%.</p>
-      </article>
-
-      <article class="card feature-card reveal" aria-labelledby="feat2-title">
-        <div class="feature-icon cyan" aria-hidden="true">&#128268;</div>
-        <h3 id="feat2-title">AAAK Compression</h3>
-        <p>A lossless shorthand dialect designed for AI agents. 30x compression with zero information loss. Your AI loads months of context in 120 tokens. Works with any model that reads text - Claude, GPT, Gemini, Llama, Mistral. No decoder required.</p>
-      </article>
-
-      <article class="card feature-card reveal" aria-labelledby="feat3-title">
-        <div class="feature-icon gold" aria-hidden="true">&#128274;</div>
-        <h3 id="feat3-title">100% Local</h3>
-        <p>Runs entirely on your machine. No external APIs required. No cloud sync. No data leaves your device. Works with local models like Llama and Mistral. Your memories stay yours, forever.</p>
-      </article>
-
-      <article class="card feature-card reveal" aria-labelledby="feat4-title">
-        <div class="feature-icon green" aria-hidden="true">&#128279;</div>
-        <h3 id="feat4-title">MCP Integration</h3>
-        <p>19 tools available through Model Context Protocol. Connect once, and your AI uses Mempalace automatically. Ask Claude anything - it calls mempalace_search and answers with your own context. No manual commands.</p>
-      </article>
-
-      <article class="card feature-card reveal" aria-labelledby="feat5-title">
-        <div class="feature-icon rose" aria-hidden="true">&#128200;</div>
-        <h3 id="feat5-title">Knowledge Graph</h3>
-        <p>A temporal entity-relationship graph built on SQLite. Time-filtered queries, fact invalidation, BFS traversal across wings. Your AI knows not just what you decided, but when and why you changed your mind.</p>
-      </article>
-
-      <article class="card feature-card reveal" aria-labelledby="feat6-title">
-        <div class="feature-icon blue" aria-hidden="true">&#129504;</div>
-        <h3 id="feat6-title">Three Mining Modes</h3>
-        <p>Mine projects (code and docs), convos (Claude, ChatGPT, Slack exports), or general (auto-classifies into decisions, preferences, milestones, problems, and emotional context). Everything indexed to ChromaDB.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- How It Works -->
-<section class="how-it-works" aria-labelledby="howitworks-heading">
-  <div class="container">
-    <div class="text-center">
-      <span class="section-tag">Workflow</span>
-      <h2 id="howitworks-heading" class="section-title">Set up once. Works forever.</h2>
-      <p class="section-subtitle">Three steps from install to having an AI with perfect memory of your entire working history.</p>
-    </div>
-
-    <div class="steps-grid">
-      <div class="step-card reveal">
-        <div class="step-number">1</div>
-        <h3>Install and Init</h3>
-        <p>Install via pip. Run <code style="color:var(--cyan);font-family:var(--font-mono);background:rgba(0,245,255,0.1);padding:2px 6px;border-radius:4px;">mempalace init</code> to define your world - who you work with, what your projects are. Takes two minutes.</p>
-      </div>
-
-      <div class="step-card reveal">
-        <div class="step-number">2</div>
-        <h3>Mine Your Data</h3>
-        <p>Point Mempalace at your chat exports, code directories, and notes. It mines and indexes everything - decisions, preferences, milestones, conversations - into your palace.</p>
-      </div>
-
-      <div class="step-card reveal">
-        <div class="step-number">3</div>
-        <h3>AI Remembers Everything</h3>
-        <p>Connect via MCP or use wake-up context. Your AI now has access to your entire history. Ask it anything you've ever discussed. It searches your palace and answers with your own words.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Benchmarks -->
-<section class="benchmarks" aria-labelledby="bench-heading">
-  <div class="container">
-    <div class="text-center">
-      <span class="section-tag">Benchmarks</span>
-      <h2 id="bench-heading" class="section-title">Numbers that speak for themselves</h2>
-      <p class="section-subtitle">Highest LongMemEval score ever published. Reproducible - all benchmark runners are open source in the repo.</p>
-    </div>
-
-    <div class="bench-table-wrap reveal">
-      <table class="bench-table" role="table" aria-label="Benchmark comparison">
-        <thead>
-          <tr>
-            <th scope="col">System</th>
-            <th scope="col">LongMemEval R@5</th>
-            <th scope="col">Score</th>
-            <th scope="col">Cost</th>
-            <th scope="col">API Required</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="highlight-row">
-            <td><strong>Mempalace</strong> <span style="font-size:0.75rem;color:var(--cyan);background:rgba(0,245,255,0.1);padding:2px 8px;border-radius:100px;margin-left:0.5rem;">You are here</span></td>
-            <td>
-              <div class="score-bar-wrap">
-                <span style="min-width:42px;color:var(--cyan);font-weight:700;">96.6%</span>
-                <div class="score-bar"><div class="score-fill" data-width="96.6" style="width:0%"></div></div>
-              </div>
-            </td>
-            <td style="color:var(--cyan);">96.6 / 100</td>
-            <td style="color:#00DC82;">Free</td>
-            <td>No</td>
-          </tr>
-          <tr class="highlight-row">
-            <td><strong>Mempalace + Haiku rerank</strong></td>
-            <td>
-              <div class="score-bar-wrap">
-                <span style="min-width:42px;color:var(--gold);font-weight:700;">100%</span>
-                <div class="score-bar"><div class="score-fill gold" data-width="100" style="width:0%"></div></div>
-              </div>
-            </td>
-            <td style="color:var(--gold);">100 / 100</td>
-            <td style="color:var(--text-muted);">Minimal</td>
-            <td>Haiku only</td>
-          </tr>
-          <tr>
-            <td>Mem.ai Pro</td>
-            <td>
-              <div class="score-bar-wrap">
-                <span style="min-width:42px;">72%</span>
-                <div class="score-bar"><div class="score-fill" data-width="72" style="width:0%;background:linear-gradient(90deg,#556080,#8899BB)"></div></div>
-              </div>
-            </td>
-            <td>72 / 100</td>
-            <td style="color:#FF8080;">$14.99/mo</td>
-            <td>Yes</td>
-          </tr>
-          <tr>
-            <td>OpenAI Memory</td>
-            <td>
-              <div class="score-bar-wrap">
-                <span style="min-width:42px;">68%</span>
-                <div class="score-bar"><div class="score-fill" data-width="68" style="width:0%;background:linear-gradient(90deg,#556080,#8899BB)"></div></div>
-              </div>
-            </td>
-            <td>68 / 100</td>
-            <td style="color:#FF8080;">ChatGPT Plus</td>
-            <td>Yes</td>
-          </tr>
-          <tr>
-            <td>Zep Cloud</td>
-            <td>
-              <div class="score-bar-wrap">
-                <span style="min-width:42px;">61%</span>
-                <div class="score-bar"><div class="score-fill" data-width="61" style="width:0%;background:linear-gradient(90deg,#556080,#8899BB)"></div></div>
-              </div>
-            </td>
-            <td>61 / 100</td>
-            <td style="color:#FF8080;">Paid</td>
-            <td>Yes</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <p style="text-align:center;margin-top:1rem;font-size:0.8rem;color:var(--text-muted);">
-      All benchmarks are reproducible. Runners available in <span style="color:var(--purple-light);">benchmarks/</span>. Results verified on LongMemEval dataset.
-    </p>
-  </div>
-</section>
-
-<!-- Code Example -->
-<section style="background:var(--bg-primary);padding:5rem 0;" aria-labelledby="code-heading">
-  <div class="container">
-    <div class="text-center" style="margin-bottom:3rem;">
-      <span class="section-tag">Quick Start</span>
-      <h2 id="code-heading">Five commands to perfect AI memory</h2>
-    </div>
-    <div class="code-block reveal" style="max-width:700px;margin:0 auto;">
-      <button class="copy-btn" aria-label="Copy code">Copy</button>
-      <pre>pip install mempalace
-
-# Tell Mempalace your world
-mempalace init ~/projects/myapp
-
-# Mine your data
-mempalace mine ~/projects/myapp
-mempalace mine ~/chats/ --mode convos
-
-# Search anything
-mempalace search "why did we switch to GraphQL"
-
-# Connect to Claude (MCP)
-claude mcp add mempalace -- python -m mempalace.mcp_server</pre>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section" aria-labelledby="cta-heading">
-  <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
-  <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
-  <div class="container" style="position:relative;z-index:1;">
-    <span class="section-tag">Get Started</span>
-    <h2 id="cta-heading">Your AI has been forgetting.<br>Fix it today.</h2>
-    <p>Mempalace is free, open source, and runs entirely on your machine. No subscription. No cloud. No compromise.</p>
-    <div class="cta-actions">
-      <a href="how-to.html" class="btn btn-cyan btn-lg">Read the Guide</a>
-      <a href="login.html" class="btn btn-primary btn-lg">Create Account</a>
-    </div>
+    <span class="section-tag">Explore</span>
+    <h2 class="section-title" style="margin-bottom:26px;">The rest of the palace</h2>
+    <a class="ex-row" href="product.html"><b>Product</b><span>Features, benchmarks &amp; how it works <i>&#8594;</i></span></a>
+    <a class="ex-row" href="demo.html"><b>Live Demo</b><span>Try the memory palace in your browser <i>&#8594;</i></span></a>
+    <a class="ex-row" href="how-to.html"><b>How-To Guide</b><span>Set up once. Works forever <i>&#8594;</i></span></a>
+    <a class="ex-row" href="about.html"><b>About</b><span>Why a palace, and who builds it <i>&#8594;</i></span></a>
   </div>
 </section>
 
@@ -567,10 +350,10 @@ claude mcp add mempalace -- python -m mempalace.mcp_server</pre>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" aria-hidden="true">
               <defs>
                 <linearGradient id="fl1" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stop-color="#00F5FF"/><stop offset="100%" stop-color="#7B2FFF"/>
+                  <stop offset="0%" stop-color="#F0B90B"/><stop offset="100%" stop-color="#C9980A"/>
                 </linearGradient>
                 <linearGradient id="fl2" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
-                  <stop offset="0%" stop-color="#7B2FFF"/><stop offset="100%" stop-color="#FFD700"/>
+                  <stop offset="0%" stop-color="#C9980A"/><stop offset="100%" stop-color="#FFE9A8"/>
                 </linearGradient>
               </defs>
               <rect x="6" y="18" width="5" height="22" rx="1.5" fill="url(#fl1)" opacity="0.9"/>
@@ -595,9 +378,9 @@ claude mcp add mempalace -- python -m mempalace.mcp_server</pre>
       <div class="footer-col">
         <h4>Product</h4>
         <ul role="list">
-          <li><a href="index.html#features">Features</a></li>
+          <li><a href="product.html#features">Features</a></li>
           <li><a href="demo.html">Live Demo</a></li>
-          <li><a href="index.html#benchmarks">Benchmarks</a></li>
+          <li><a href="product.html#benchmarks">Benchmarks</a></li>
           <li><a href="how-to.html">How-To Guide</a></li>
           </ul>
       </div>
